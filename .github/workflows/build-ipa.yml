@@ -58,8 +58,12 @@ jobs:
         run: |
           cd build/ios
           DERIVED_DATA="$PWD/DerivedData"
+          SCHEME="$(xcodebuild -list -project wiejski.xcodeproj | awk '/Schemes:/{getline; print $1; exit}')"
+          test -n "$SCHEME"
+          echo "Using Xcode scheme: $SCHEME"
           xcodebuild build \
             -project wiejski.xcodeproj \
+            -scheme "$SCHEME" \
             -configuration Release \
             -sdk iphoneos \
             -derivedDataPath "$DERIVED_DATA" \
