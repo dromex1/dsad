@@ -12,6 +12,7 @@ var look_touch_id: int = -1
 var joystick_center: Vector2 = Vector2.ZERO
 var joystick_vector: Vector2 = Vector2.ZERO
 var joystick_radius: float = 96.0
+var joystick_activation_size: Vector2 = Vector2(320, 320)
 var look_sensitivity: float = 1.0
 var pressed_actions: Dictionary = {}
 
@@ -57,13 +58,13 @@ func _input(event: InputEvent) -> void:
 func _handle_touch(event: InputEventScreenTouch) -> void:
 	var viewport_size: Vector2 = get_viewport().get_visible_rect().size
 	if event.pressed:
-		if event.position.x < viewport_size.x * 0.42 and joystick_touch_id == -1:
+		if _is_in_joystick_zone(event.position, viewport_size) and joystick_touch_id == -1:
 			joystick_touch_id = event.index
 			joystick_center = event.position
 			joystick_base.global_position = joystick_center - joystick_base.size * 0.5
 			joystick_knob.position = joystick_base.size * 0.5 - joystick_knob.size * 0.5
 			joystick_base.visible = true
-		elif event.position.x >= viewport_size.x * 0.42 and look_touch_id == -1:
+		elif not _is_over_menu_or_ui(event.position) and look_touch_id == -1:
 			look_touch_id = event.index
 	else:
 		if event.index == joystick_touch_id:
@@ -85,6 +86,29 @@ func _handle_drag(event: InputEventScreenDrag) -> void:
 		_update_move_actions(joystick_vector)
 	elif event.index == look_touch_id:
 		_apply_look(event.relative * look_sensitivity)
+
+
+func _is_in_joystick_zone(position: Vector2, viewport_size: Vector2) -> bool:
+	var zone: Rect2 = Rect2(Vector2(0, viewport_size.y - joystick_activation_size.y), joystick_activation_size)
+	return zone.has_point(position)
+
+
+func _is_over_menu_or_ui(position: Vector2) -> bool:
+	var hovered_control: Control = get_viewport().gui_get_hovered_control()
+	if hovered_control == null:
+		return false
+	if _is_own_control(hovered_control):
+		return false
+	return hovered_control.get_global_rect().has_point(position)
+
+
+func _is_own_control(control: Control) -> bool:
+	var current: Node = control
+	while current != null:
+		if current == root_control:
+			return true
+		current = current.get_parent()
+	return false
 
 
 func _update_move_actions(vector: Vector2) -> void:
