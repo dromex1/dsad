@@ -9,6 +9,7 @@ var target_scene = "res://scena_gry.tscn"
 var progress = []
 
 func _ready():
+	target_scene = _get_target_scene()
 	_build_ui()
 	# Rozpoczynamy ładowanie w tle
 	ResourceLoader.load_threaded_request(target_scene)
@@ -29,6 +30,12 @@ func _process(_delta):
 		ResourceLoader.THREAD_LOAD_FAILED:
 			print("BŁĄD ŁADOWANIA SCENY!")
 			get_tree().change_scene_to_file("res://main_menu.tscn")
+
+
+func _get_target_scene() -> String:
+	if OS.has_feature("ios") or OS.has_feature("mobile"):
+		return "res://scena_gry_mobile.tscn"
+	return "res://scena_gry.tscn"
 
 func _build_ui():
 	# Tło

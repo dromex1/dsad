@@ -11,6 +11,14 @@ var scene_path = "res://scena_gry.tscn"
 var is_loading = false
 var progress = [0.0] # Używamy tablicy, żeby przekazać ją do funkcji (taka sztuczka w Godot)
 
+func _ready():
+	scene_path = _get_target_scene()
+
+
+func _input(event):
+	if event is InputEventScreenTouch and event.pressed and not is_loading:
+		_start_loading()
+
 
 # Ta funkcja działa w każdej klatce
 func _process(_delta):
@@ -20,13 +28,7 @@ func _process(_delta):
 	if not is_loading:
 		# I jeśli gracz wcisnął Spację
 		if Input.is_action_just_pressed("ui_accept"):
-			print("Rozpoczynam ładowanie w tle...")
-			# 1. Ustaw flagę, że ładujemy
-			is_loading = true
-			# 2. Zmień tekst, żeby gracz wiedział, co się dzieje
-			prompt_label.text = "ŁADOWANIE... CZEKAJ."
-			# 3. Rozpocznij ładowanie sceny w tle (w osobnym wątku)
-			ResourceLoader.load_threaded_request(scene_path)
+			_start_loading()
 
 	# --- ETAP 2: Ładowanie w toku ---
 	# Jeśli ładujemy grę
@@ -59,3 +61,16 @@ func _process(_delta):
 			print("BŁĄD: Nie udało się załadować sceny gry!")
 			prompt_label.text = "BŁĄD ŁADOWANIA!"
 			# Możesz tu dodać np. `get_tree().quit()`
+
+
+func _start_loading():
+	print("Rozpoczynam ?adowanie w tle...")
+	is_loading = true
+	prompt_label.text = "?ADOWANIE... CZEKAJ."
+	ResourceLoader.load_threaded_request(scene_path)
+
+
+func _get_target_scene() -> String:
+	if OS.has_feature("ios") or OS.has_feature("mobile"):
+		return "res://scena_gry_mobile.tscn"
+	return "res://scena_gry.tscn"
