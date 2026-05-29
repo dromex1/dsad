@@ -1,0 +1,91 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6cu4xw8axkpv"]
+
+[ext_resource type="Script" uid="uid://cnfi8ybt8yxq6" path="res://intro_scene.gd" id="1_2glrg"]
+[ext_resource type="FontFile" uid="uid://bgyfur5g6v026" path="res://Czcionki/toxigenesis bd.otf" id="1_fqpck"]
+[ext_resource type="Texture2D" uid="uid://bit42xntxheuj" path="res://zdjecia ikony itp/Gemini_Generated_Image_n6xyp9n6xyp9n6xy-Photoroom.png" id="1_x3ncd"]
+
+[node name="IntroScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2glrg")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="GeminiGeneratedImageN6Xyp9n6Xyp9n6XyPhotoroom" type="Sprite2D" parent="ColorRect"]
+position = Vector2(1653.0001, 837)
+scale = Vector2(0.578125, 0.5136719)
+texture = ExtResource("1_x3ncd")
+
+[node name="IntroText" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 228.0
+offset_top = 169.0
+offset_right = 1655.0
+offset_bottom = 901.0
+theme_override_fonts/font = ExtResource("1_fqpck")
+theme_override_font_sizes/font_size = 26
+text = "                                                                         Siema, kumplu...
+
+                                                                     Nazywasz się Janusz.
+
+             Twoje życie to nie bajka — ale za to pełne przygód, zapachu benzyny i taniego piwska.
+
+      Na start dostajesz rower MTB — prawdziwy potwór na dwóch kółkach. Twój pierwszy szybkowóz.
+
+                              Twoim zadaniem będzie robota dorywcza — taka, jaka się trafi:
+
+                                                                -dowóz żarcia po osiedlu,
+
+                                               -zbieranie butelek po Tatrzańskiej Rozkoszy,
+
+                                     -albo fucha u Sylwka, przy rozbiórce drogi komunalnej.
+
+                          Za zarobione pieniądze kupisz swój pierwszy skuter wyścigowy 50cc.
+
+                                                                                A potem?
+
+Potem zacznie się prawdziwa jazda..."
+
+[node name="PromptLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -171.5
+offset_top = -74.0
+offset_right = 171.5
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "[Naciśnij SPACJĘ, aby kontynuować]"
+
+[node name="LoadingBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(400, 30)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -38.0
+offset_right = 200.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_fqpck")
+theme_override_font_sizes/font_size = 20

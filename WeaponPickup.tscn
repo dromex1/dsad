@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ctj1l10qo8k0t"]
+
+[ext_resource type="Script" path="res://WeaponPickup.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://rhkoj31hvj0e" path="res://Modele/tacos_map/walther_p88_gun.glb" id="2_gun"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1"]
+size = Vector3(0.5, 0.3, 0.1)
+
+[node name="WeaponPickup" type="RigidBody3D" groups=["interactable"]]
+collision_layer = 1
+collision_mask = 3
+mass = 2.0
+script = ExtResource("1_script")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_1")
+
+[node name="walther_p88_gun" parent="." instance=ExtResource("2_gun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)

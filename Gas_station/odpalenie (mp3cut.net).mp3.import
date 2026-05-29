@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d2sexgcsvwu1q"
+path="res://.godot/imported/odpalenie (mp3cut.net).mp3-12c259488ee1a38c83788631860e7afa.mp3str"
+
+[deps]
+
+source_file="res://Gas_station/odpalenie (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/odpalenie (mp3cut.net).mp3-12c259488ee1a38c83788631860e7afa.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

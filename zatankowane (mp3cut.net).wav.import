@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://w405hs0np2g2"
+path="res://.godot/imported/zatankowane (mp3cut.net).wav-f28c90f4226ab4d79f461fe7b76e21a5.sample"
+
+[deps]
+
+source_file="res://zatankowane (mp3cut.net).wav"
+dest_files=["res://.godot/imported/zatankowane (mp3cut.net).wav-f28c90f4226ab4d79f461fe7b76e21a5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

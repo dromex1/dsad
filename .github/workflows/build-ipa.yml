@@ -1,0 +1,89 @@
+name: Build IPA for Sideloadly
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    name: Build IPA with Xcode
+    runs-on: macos-15
+    env:
+      GODOT_VERSION: 4.6-stable
+      GODOT_TEMPLATES_VERSION: 4.6.stable
+      GODOT_BIN: /Applications/Godot.app/Contents/MacOS/Godot
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Verify Git LFS assets
+        run: |
+          git lfs pull
+          if grep -RIl "https://git-lfs.github.com/spec/v1" --include='*.glb' --include='*.gltf' --include='*.png' --include='*.jpg' --include='*.jpeg' --include='*.webp' --include='*.mp3' --include='*.wav' .; then
+            echo "Some binary assets are still Git LFS pointer files after checkout."
+            exit 1
+          fi
+
+      - name: Install Godot
+        run: |
+          curl -L -o godot.zip "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}/Godot_v${GODOT_VERSION}_macos.universal.zip"
+          unzip -q godot.zip
+          mv Godot.app /Applications/Godot.app
+          rm godot.zip
+
+      - name: Install Godot export templates
+        run: |
+          mkdir -p "$HOME/Library/Application Support/Godot/export_templates/${GODOT_TEMPLATES_VERSION}"
+          curl -L -o templates.zip "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}/Godot_v${GODOT_VERSION}_export_templates.tpz"
+          unzip -q templates.zip
+          mv templates/* "$HOME/Library/Application Support/Godot/export_templates/${GODOT_TEMPLATES_VERSION}/"
+          rm -rf templates templates.zip
+
+      - name: Import Godot project
+        run: |
+          "$GODOT_BIN" --headless --editor --quit
+
+      - name: Export Xcode project
+        run: |
+          mkdir -p build/ios
+          "$GODOT_BIN" --headless --export-release "iOS" build/ios/wiejski.xcodeproj
+          test -d build/ios/wiejski.xcodeproj
+          test -f build/ios/wiejski.xcodeproj/project.pbxproj
+
+      - name: Build unsigned app
+        run: |
+          cd build/ios
+          DERIVED_DATA="$PWD/DerivedData"
+          xcodebuild build \
+            -project wiejski.xcodeproj \
+            -configuration Release \
+            -sdk iphoneos \
+            -derivedDataPath "$DERIVED_DATA" \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGN_STYLE="Manual"
+          APP_PATH="$(find "$DERIVED_DATA/Build/Products/Release-iphoneos" -maxdepth 1 -name '*.app' -type d -print -quit)"
+          test -n "$APP_PATH"
+          test -f "$APP_PATH/Info.plist"
+
+      - name: Package IPA
+        run: |
+          cd build/ios
+          APP_PATH="$(find "$PWD/DerivedData/Build/Products/Release-iphoneos" -maxdepth 1 -name '*.app' -type d -print -quit)"
+          test -n "$APP_PATH"
+          rm -rf Payload
+          mkdir -p Payload
+          cp -R "$APP_PATH" Payload/
+          /usr/bin/zip -qry ../../WiejskiKaskader-Sideloadly.ipa Payload
+          test -s ../../WiejskiKaskader-Sideloadly.ipa
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: WiejskiKaskader-iPhone-Sideloadly
+          path: WiejskiKaskader-Sideloadly.ipa

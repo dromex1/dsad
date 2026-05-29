@@ -1,0 +1,186 @@
+[gd_scene load_steps=4 format=3 uid="uid://be8n6q2u3l5j5"]
+
+[ext_resource type="Script" path="res://addons/Basic FPS Player/Src/basic_player_startup.gd" id="1_script"]
+[ext_resource type="FontFile" uid="uid://bgyfur5g6v026" path="res://Czcionki/toxigenesis bd.otf" id="2_font"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_p1"]
+radius = 0.4
+height = 1.8
+
+[node name="NetPlayer" type="CharacterBody3D"]
+script = ExtResource("1_script")
+SPEED = 2.5
+IN_AIR_SPEED = 1.0
+IN_AIR_ACCEL = 1.0
+JUMP_VELOCITY = 2.4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_p1")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+
+[node name="InteractionRaycast" type="RayCast3D" parent="Head/Camera3D"]
+enabled = true
+target_position = Vector3(0, 0, -2.5)
+collision_mask = 1
+collide_with_areas = true
+
+[node name="NetSync" type="MultiplayerSynchronizer" parent="."]
+
+[node name="PlayerUI" type="CanvasLayer" parent="."]
+layer = 1
+
+[node name="InteractionPromptLabel" type="Label" parent="PlayerUI"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = 40.0
+offset_right = 100.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "[ Kliknij PPM ]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RefuelContainer" type="VBoxContainer" parent="PlayerUI"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = 20.0
+offset_right = 160.0
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RefuelLabel" type="Label" parent="PlayerUI/RefuelContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 19
+text = "Tankowanie . . ."
+
+[node name="RefuelBar" type="ProgressBar" parent="PlayerUI/RefuelContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="MoneyLabel" type="Label" parent="PlayerUI"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 257.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 25
+text = "Saldo: 1000.00 zł"
+
+[node name="InventoryBar" type="HBoxContainer" parent="PlayerUI"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -40.0
+offset_right = 160.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Panel" type="Panel" parent="PlayerUI/InventoryBar"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Panel2" type="Panel" parent="PlayerUI/InventoryBar"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Panel3" type="Panel" parent="PlayerUI/InventoryBar"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Panel4" type="Panel" parent="PlayerUI/InventoryBar"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Panel5" type="Panel" parent="PlayerUI/InventoryBar"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="PauseUI" type="CanvasLayer" parent="."]
+
+[node name="PauseBackground" type="ColorRect" parent="PauseUI"]
+unique_name_in_owner = true
+process_mode = 3
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.37254903)
+
+[node name="PauseButtons" type="VBoxContainer" parent="PauseUI/PauseBackground"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -352.875
+offset_top = -220.375
+offset_right = 352.875
+offset_bottom = 220.375
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="WrocButton" type="Button" parent="PauseUI/PauseBackground/PauseButtons"]
+process_mode = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 25
+text = "WRÓĆ DO GRY"
+
+[node name="UstawieniaButton" type="Button" parent="PauseUI/PauseBackground/PauseButtons"]
+process_mode = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 26
+text = "USTAWIENIA"
+
+[node name="WyjscieButton" type="Button" parent="PauseUI/PauseBackground/PauseButtons"]
+process_mode = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 25
+text = "WYJDŹ DO MENU"
+
+[node name="OptionsPanel" type="PanelContainer" parent="PauseUI/PauseBackground"]
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -250.0
+offset_right = 300.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OptionsLayout" type="VBoxContainer" parent="PauseUI/PauseBackground/OptionsPanel"]
+layout_mode = 2
+theme_override_constants/separation = 20

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://co0kr5futrlmq"]
+
+[ext_resource type="PackedScene" uid="uid://dse2m6r38qmrg" path="res://Modele/worn_out_old_school_vespa.glb" id="1_r57si"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_r57si")]
+
+[node name="defaultMaterial110" parent="Sketchfab_model/Collada visual scene group/Full_Modell_low/Smaller_Parts_low/Parking_low/St��tte_low" index="0"]
+visible = false

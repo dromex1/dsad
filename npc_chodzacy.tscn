@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://vq0hry5t3hv5"]
+
+[ext_resource type="PackedScene" uid="uid://b151kidare18a" path="res://male_casual_walk.glb" id="1_1m0ub"]
+[ext_resource type="Script" uid="uid://budpof5rm88fk" path="res://npc_chodzacy.gd" id="1_27ydr"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1m0ub"]
+
+[node name="NPC_Chodzacy" type="CharacterBody3D"]
+script = ExtResource("1_27ydr")
+
+[node name="male_casual_walk" parent="." instance=ExtResource("1_1m0ub")]
+transform = Transform3D(-6.5567085e-09, 0, -0.15, 0, 0.15, 0, 0.15, 0, -6.5567085e-09, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(8.25, 0, 0, 0, 8.25, 0, 0, 0, 8.25, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_1m0ub")

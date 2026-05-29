@@ -1,0 +1,82 @@
+[gd_scene load_steps=8 format=3 uid="uid://3ra66ro0dtbv"]
+
+[ext_resource type="Script" uid="uid://cbjho5vyx21gu" path="res://bike.gd" id="1_ela25"]
+[ext_resource type="PackedScene" uid="uid://bxk0cy7w8w1mk" path="res://Modele/old_bike.glb" id="1_lf8oo"]
+[ext_resource type="FontFile" uid="uid://bgyfur5g6v026" path="res://Czcionki/toxigenesis bd.otf" id="2_ela25"]
+[ext_resource type="AudioStream" uid="uid://c1grh0vhccpni" path="res://ss/bike-bell-173588 (mp3cut.net).mp3" id="4_pbnlw"]
+[ext_resource type="AudioStream" uid="uid://dclkkl6po6v10" path="res://ss/bike-ride-78769 (mp3cut.net).mp3" id="4_vlnlv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vlnlv"]
+size = Vector3(459.78, 234.225, 104.7)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_pbnlw"]
+height = 1.0
+radius = 0.35
+
+[node name="Bike" type="CharacterBody3D"]
+script = ExtResource("1_ela25")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-3.3683114e-05, 0, 0.0019997163, 0, 0.0019999999, 0, -0.0019997163, 0, -3.3683114e-05, 0.00057995756, 0.265333, -0.0005898086)
+shape = SubResource("BoxShape3D_vlnlv")
+debug_color = Color(0.6412013, 0, 0.31392553, 0.41960785)
+
+[node name="model_roweru" parent="." instance=ExtResource("1_lf8oo")]
+transform = Transform3D(-3.3683114e-05, 0, 0.0019997163, 0, 0.0019999999, 0, -0.0019997163, 0, -3.3683114e-05, 0.000599827, 0, 0.0005898086)
+
+[node name="InteractZone" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractZone"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.33611664, 0)
+shape = SubResource("CylinderShape3D_pbnlw")
+
+[node name="PromptLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5764605, 0)
+visible = false
+billboard = 2
+text = "KLIKNIJ [E]"
+font = ExtResource("2_ela25")
+font_size = 27
+
+[node name="BellSoundPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_pbnlw")
+volume_db = -10.608
+
+[node name="RideSoundPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_vlnlv")
+volume_db = -9.724
+parameters/looping = true
+
+[node name="BellTimer" type="Timer" parent="."]
+wait_time = 3.392
+one_shot = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BindLabel" type="Label" parent="CanvasLayer"]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -253.0
+offset_top = 14.0
+offset_right = -30.0
+offset_bottom = 311.0
+grow_horizontal = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_constants/shadow_outline_size = 55
+theme_override_fonts/font = ExtResource("2_ela25")
+theme_override_font_sizes/font_size = 17
+text = "DO PRZODU:  [W]
+
+DO TYŁU:  [S]
+
+SKRĘT W LEWO:  [A]
+
+SKRĘT W PRAWO:  [D]
+
+DZWONEK:  [Q]
+
+ZSIADANIE:  [E]
+"

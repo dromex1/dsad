@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cviuvpxnc6ow3"]
+
+[ext_resource type="PackedScene" uid="uid://rhkoj31hvj0e" path="res://Modele/tacos_map/walther_p88_gun.glb" id="1_gun"]
+[ext_resource type="AudioStream" uid="uid://cckr2ormudj0l" path="res://gunshot.mp3" id="2_sound"]
+
+[node name="PistolViewModel" type="Node3D" unique_id=234027999]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18, -0.22, -0.5)
+
+[node name="walther_p88_gun" parent="." unique_id=495412794 instance=ExtResource("1_gun")]
+transform = Transform3D(0.0007905437, 0, -0.029989582, 0, 0.03, 0, 0.029989582, 0, 0.0007905437, 0.5276653, -0.44539604, -0.34388468)
+
+[node name="MuzzleFlash" type="OmniLight3D" parent="walther_p88_gun" unique_id=494131652]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, -9.895693, 12.588945, -0.38)
+light_color = Color(1, 0.8, 0.4, 1)
+light_energy = 0.0
+omni_range = 3.0
+
+[node name="GunshotSound" type="AudioStreamPlayer3D" parent="walther_p88_gun" unique_id=123038391]
+stream = ExtResource("2_sound")

@@ -1,0 +1,202 @@
+[gd_scene format=3 uid="uid://u6xcfiyswjcj"]
+
+[ext_resource type="Script" uid="uid://d4nwmqao4se8i" path="res://main_menu.gd" id="1_fu7sn"]
+[ext_resource type="FontFile" uid="uid://bgyfur5g6v026" path="res://Czcionki/toxigenesis bd.otf" id="2_7vrkn"]
+[ext_resource type="PackedScene" uid="uid://c2ldhmxj6qdp7" path="res://scena_grydomain.tscn" id="4_glbon"]
+[ext_resource type="AudioStream" uid="uid://djr2jj2ge7bkq" path="res://muzyka_menu.mp3" id="4_jix8l"]
+[ext_resource type="PackedScene" uid="uid://cdd1epnk30gbp" path="res://Car3.glb" id="5_glbon"]
+[ext_resource type="PackedScene" uid="uid://cymh1dl4frr18" path="res://Car2.glb" id="6_qe12f"]
+[ext_resource type="PackedScene" uid="uid://btqweuljnb5xa" path="res://enginesoundmainmenu.tscn" id="7_qe12f"]
+[ext_resource type="PackedScene" uid="uid://dav5x0wyvbdx7" path="res://dym z rury.tscn" id="8_8qtwp"]
+[ext_resource type="PackedScene" uid="uid://cvmrcmbyi0mry" path="res://ss.xcframework/male_casual_sit.glb" id="9_0o4t1"]
+[ext_resource type="Script" uid="uid://bltd05a6eo5qq" path="res://ss.xcframework/male_casual_sit.gd" id="10_0k4wn"]
+[ext_resource type="PackedScene" uid="uid://vq0hry5t3hv5" path="res://npc_chodzacy.tscn" id="11_0k4wn"]
+[ext_resource type="AudioStream" uid="uid://btp6bxo13qlsq" path="res://buttonclick.wav" id="12_j5v2v"]
+
+[sub_resource type="Theme" id="Theme_fu7sn"]
+
+[sub_resource type="GDScript" id="GDScript_qe12f"]
+
+[node name="MainMenu" type="Control" unique_id=932027775]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+script = ExtResource("1_fu7sn")
+
+[node name="MenuButtons" type="VBoxContainer" parent="." unique_id=379220809]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -934.0
+offset_top = -539.0
+offset_right = -293.0
+offset_bottom = -106.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="ContinueButton" type="Button" parent="MenuButtons" unique_id=169228276]
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_fu7sn")
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 50
+text = "KONTYNUJ GRĘ"
+
+[node name="StartButton" type="Button" parent="MenuButtons" unique_id=1010002005]
+layout_mode = 2
+theme = SubResource("Theme_fu7sn")
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 50
+text = "NOWA GRA"
+
+[node name="OptionsButton" type="Button" parent="MenuButtons" unique_id=1892899271]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 50
+text = "USTAWIENIA"
+
+[node name="QuitButton" type="Button" parent="MenuButtons" unique_id=26943827]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 50
+text = "WYJŚCIE"
+
+[node name="OptionsPanel" type="PanelContainer" parent="." unique_id=771287496]
+visible = false
+custom_minimum_size = Vector2(600, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OptionsLayout" type="VBoxContainer" parent="OptionsPanel" unique_id=1185361723]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsPanel/OptionsLayout" unique_id=1978533331]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 40
+text = "OPCJE"
+horizontal_alignment = 1
+
+[node name="MusicHBox" type="HBoxContainer" parent="OptionsPanel/OptionsLayout" unique_id=323413518]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsPanel/OptionsLayout/MusicHBox" unique_id=927056934]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 28
+text = "Głośność Muzyki"
+
+[node name="MusicSlider" type="HSlider" parent="OptionsPanel/OptionsLayout/MusicHBox" unique_id=1829842289]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+value = 0.8
+
+[node name="SFXHBox" type="HBoxContainer" parent="OptionsPanel/OptionsLayout" unique_id=1498546016]
+layout_mode = 2
+
+[node name="Głosnosc Dzwiekow" type="Label" parent="OptionsPanel/OptionsLayout/SFXHBox" unique_id=235179283]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 28
+text = "Głośność Dźwięków"
+
+[node name="SFXSlider" type="HSlider" parent="OptionsPanel/OptionsLayout/SFXHBox" unique_id=1713049370]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GraphicsHBox" type="HBoxContainer" parent="OptionsPanel/OptionsLayout" unique_id=89310334]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsPanel/OptionsLayout/GraphicsHBox" unique_id=1483357793]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 28
+text = "Jakość Grafiki"
+
+[node name="GraphicOptions" type="OptionButton" parent="OptionsPanel/OptionsLayout/GraphicsHBox" unique_id=1169174331]
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "Niska"
+popup/item_0/id = 0
+popup/item_1/text = "Średnia"
+popup/item_1/id = 1
+popup/item_2/text = "Wysoka(rozpierdala pc)"
+popup/item_2/id = 2
+
+[node name="WsteczButton" type="Button" parent="OptionsPanel/OptionsLayout" unique_id=1620239340]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 25
+text = "WSTECZ
+"
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="." unique_id=2052008031]
+stream = ExtResource("4_jix8l")
+volume_db = 10.097
+autoplay = true
+attenuation = 1.035265
+bus = &"Music"
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1224058214]
+transform = Transform3D(0.6557165, 0, 0.7550072, 0, 1, 0, -0.7550072, 0, 0.6557165, -36.934093, 1.1276846, -56.333538)
+
+[node name="SwiatGry" parent="." unique_id=1763425543 instance=ExtResource("4_glbon")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.457603, 9.536743e-07, 10.546802)
+
+[node name="Car32" parent="." unique_id=831300066 instance=ExtResource("5_glbon")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -40.65133, 0.10399914, -60.080067)
+
+[node name="Car22" parent="." unique_id=1785908537 instance=ExtResource("6_qe12f")]
+transform = Transform3D(-0.4999682, 0, -0.005637269, 0, 0.5, 0, 0.005637269, 0, -0.4999682, -43.439682, 0.09443796, -60.160706)
+script = SubResource("GDScript_qe12f")
+
+[node name="Engine" parent="." unique_id=787170562 instance=ExtResource("7_qe12f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.288578, 0.48702013, -57.955242)
+
+[node name="Node3D" parent="." unique_id=47013077 instance=ExtResource("8_8qtwp")]
+transform = Transform3D(0.655, 0, 0, 0, 0.655, 0, 0, 0, 0.655, -45.329712, 0.37869, -58.805264)
+
+[node name="male_casual_sit" parent="." unique_id=813817333 instance=ExtResource("9_0o4t1")]
+transform = Transform3D(0.015, 0, 0, 0, 0.015, 0, 0, 0, 0.015, -43.308792, 1.064148, -58.54635)
+script = ExtResource("10_0k4wn")
+
+[node name="NPC_Chodzacy" parent="." unique_id=1934986244 instance=ExtResource("11_0k4wn")]
+transform = Transform3D(-0.0995971, 0, 0.008967654, 0, 0.1, 0, -0.008967654, 0, -0.0995971, -56.084938, 0.7014482, -55.796124)
+up_direction = Vector3(1, 0, 0)
+predkosc_ruchu = 1.0
+kierunek_ruchu = Vector3(1, 0, 0)
+
+[node name="ClickSoundPlayer" type="AudioStreamPlayer" parent="." unique_id=428098227]
+stream = ExtResource("12_j5v2v")
+
+[connection signal="pressed" from="MenuButtons/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="MenuButtons/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MenuButtons/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="MenuButtons/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="value_changed" from="OptionsPanel/OptionsLayout/MusicHBox/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="OptionsPanel/OptionsLayout/SFXHBox/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="item_selected" from="OptionsPanel/OptionsLayout/GraphicsHBox/GraphicOptions" to="." method="_on_graphic_options_item_selected"]
+[connection signal="pressed" from="OptionsPanel/OptionsLayout/WsteczButton" to="." method="_on_wstecz_button_pressed"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uids="uid://d2abcw0q2lv4w"]
+
+[ext_resource type="Script" path="res://ScooterShop.gd" id="1_8bqc3"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_c8hy5"]
+size = Vector3(4, 2.5, 4)
+
+[node name="ScooterShop" type="Node3D"]
+script = ExtResource("1_8bqc3")
+
+[node name="ShopArea" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ShopArea"]
+shape = SubResource("BoxShape3D_c8hy5")
+
+[node name="ShopPrompt" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+text = "Sklep
+Naciśnij [E]"
+font_size = 24

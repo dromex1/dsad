@@ -1,0 +1,13 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+/.import/
+/.mono/
+/build/
+/export/
+*.pck
+*.xcarchive/
+*.xcodeproj/
+*.tmp
+*.translation
+export_credentials.cfg

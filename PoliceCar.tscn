@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://byan1dtm2wg22"]
+
+[ext_resource type="Script" path="res://PoliceAI.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://Modele/tacos_map/kia.glb" id="2_kia"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kia"]
+size = Vector3(1.8, 1.5, 4.2)
+
+[node name="PoliceCar" type="CharacterBody3D"]
+script = ExtResource("1_script")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("BoxShape3D_kia")
+
+[node name="kia" parent="." instance=ExtResource("2_kia")]
+transform = Transform3D(-0.15, 0, 0, 0, 0.15, 0, 0, 0, -0.15, 0, 0, 0)
+
+[node name="RayCastCenter" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -2.5)
+target_position = Vector3(0, -2, 0)
+
+[node name="RayCastLeft" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.5, -2.5)
+target_position = Vector3(0, -2, 0)
+
+[node name="RayCastRight" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, -2.5)
+target_position = Vector3(0, -2, 0)
+
+[node name="StopTimer" type="Timer" parent="."]
+one_shot = true

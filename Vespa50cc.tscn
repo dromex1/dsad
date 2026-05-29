@@ -1,0 +1,90 @@
+[gd_scene load_steps=9 format=3 uid="uid://ds55t0yiyx5n3"]
+
+[ext_resource type="Script" uid="uid://dfq37wv885ts0" path="res://vespa.gd" id="1_k4dx6"]
+[ext_resource type="PackedScene" uid="uid://dse2m6r38qmrg" path="res://Modele/worn_out_old_school_vespa.glb" id="2_k4dx6"]
+[ext_resource type="FontFile" uid="uid://bgyfur5g6v026" path="res://Czcionki/toxigenesis bd.otf" id="3_m10et"]
+[ext_resource type="AudioStream" uid="uid://dsilwnr1cdmfh" path="res://Modele/jaglak_trabisz.mp3" id="4_rit1p"]
+[ext_resource type="AudioStream" uid="uid://bkuu2js42d2u5" path="res://vespaidlesound.mp3" id="5_rit1p"]
+[ext_resource type="AudioStream" uid="uid://ckbj6gaphnak" path="res://vespaprzyspieszenie.mp3" id="6_m10et"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vlnlv"]
+size = Vector3(459.78, 234.225, 104.7)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_pbnlw"]
+height = 1.0
+radius = 0.39
+
+[node name="Bike" type="CharacterBody3D"]
+script = ExtResource("1_k4dx6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-3.3683114e-05, 0, 0.0019997163, 0, 0.0019999999, 0, -0.0019997163, 0, -3.3683114e-05, 0.00057995756, 0.265333, -0.0005898086)
+shape = SubResource("BoxShape3D_vlnlv")
+debug_color = Color(0.6412013, 0, 0.31392553, 0.41960785)
+
+[node name="model_roweru" parent="." instance=ExtResource("2_k4dx6")]
+transform = Transform3D(-0.39999947, 0, 0.0006562834, 0, 0.4, 0, -0.0006562834, 0, -0.39999947, 0.045625582, 0.27820534, -0.008277014)
+
+[node name="InteractZone" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractZone"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.03833878, 0.33611664, 0)
+shape = SubResource("CylinderShape3D_pbnlw")
+
+[node name="PromptLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5764605, 0)
+visible = false
+billboard = 2
+text = "KLIKNIJ [E]"
+font = ExtResource("3_m10et")
+font_size = 27
+
+[node name="BellSoundPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_rit1p")
+volume_db = -10.608
+
+[node name="BellTimer" type="Timer" parent="."]
+wait_time = 3.392
+one_shot = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BindLabel" type="Label" parent="CanvasLayer"]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -253.0
+offset_top = 14.0
+offset_right = -30.0
+offset_bottom = 311.0
+grow_horizontal = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_constants/shadow_outline_size = 55
+theme_override_fonts/font = ExtResource("3_m10et")
+theme_override_font_sizes/font_size = 17
+text = "DO PRZODU:  [W]
+
+DO TYŁU:  [S]
+
+SKRĘT W LEWO:  [A]
+
+SKRĘT W PRAWO:  [D]
+
+KLAKSON:  [Q]
+
+ZSIADANIE:  [E]
+"
+
+[node name="IdleSoundPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_rit1p")
+volume_db = -80.0
+max_db = -7.608
+parameters/looping = true
+
+[node name="AccelSoundPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_m10et")
+volume_db = -80.0
+max_db = -9.1
+parameters/looping = true

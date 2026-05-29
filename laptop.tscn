@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://cnhwxtm6qo44u"]
+
+[ext_resource type="Script" uid="uid://cgc0b4t22prxf" path="res://Laptop.gd" id="1_r5am3"]
+[ext_resource type="PackedScene" uid="uid://cmn001e0026ic" path="res://G laptop.gltf" id="1_u7rvs"]
+[ext_resource type="PackedScene" uid="uid://dsmp8e3puel4f" path="res://LaptopUI.tscn" id="2_5own1"]
+[ext_resource type="PackedScene" uid="uid://cxtdugspa6ma8" path="res://desk.glb" id="2_r5am3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5own1"]
+size = Vector3(0.48, 0.51, 0.57)
+
+[node name="Laptop" type="Area3D"]
+script = ExtResource("1_r5am3")
+laptop_ui_scene = ExtResource("2_5own1")
+
+[node name="G laptop" parent="." instance=ExtResource("1_u7rvs")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.1184749, 0.54247856, 0.06592733)
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("2_r5am3")]
+transform = Transform3D(0.003, 0, 0, 0, 0.003, 0, 0, 0, 0.003, 0.08988953, 0, -0.018685102)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12455678, 0.8036063, -0.0017304122)
+shape = SubResource("BoxShape3D_5own1")

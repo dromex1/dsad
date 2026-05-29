@@ -1,0 +1,1011 @@
+[gd_scene format=3 uid="uid://k4oo22rgo6es"]
+
+[ext_resource type="Texture2D" uid="uid://blyg72rocdarx" path="res://textury/trawa2/Grass002_1K-JPG_Color.jpg" id="1_o3xg3"]
+[ext_resource type="Script" uid="uid://10ieormhysus" path="res://addons/Basic FPS Player/Src/basic_player_startup.gd" id="1_xpt0u"]
+[ext_resource type="Texture2D" uid="uid://cf4ii15qyjk0v" path="res://textury/bloto/Ground015_2K-JPG_Color.jpg" id="2_2x0e7"]
+[ext_resource type="PackedScene" uid="uid://kmyakts4l64t" path="res://addons/Basic FPS Player/Src/basic_player_head.tscn" id="2_uls0g"]
+[ext_resource type="Texture2D" uid="uid://1tuyqyatrg5m" path="res://focus.png" id="3_cqopq"]
+[ext_resource type="PackedScene" uid="uid://bppm2bp0ywaka" path="res://Modele/garage.glb" id="3_kevww"]
+[ext_resource type="FontFile" uid="uid://bgyfur5g6v026" path="res://Czcionki/toxigenesis bd.otf" id="4_bo80c"]
+[ext_resource type="PackedScene" uid="uid://cpec0klmmcoca" path="res://Modele/old_garage.glb" id="4_gkg1b"]
+[ext_resource type="PackedScene" uid="uid://c5xfehksw2jic" path="res://Modele/uploads_files_6384330_Old_sideHouse.glb" id="4_ord0c"]
+[ext_resource type="PackedScene" uid="uid://dqlailj0xlgv8" path="res://Modele/old_red_rusty_garage_door.glb" id="5_53e27"]
+[ext_resource type="PackedScene" uid="uid://dqbc10qltms30" path="res://Modele/trash3.glb" id="5_d071x"]
+[ext_resource type="PackedScene" uid="uid://b71a5h001yqry" path="res://Modele/trash2.glb" id="6_epnf4"]
+[ext_resource type="AudioStream" uid="uid://btp6bxo13qlsq" path="res://buttonclick.wav" id="6_mfhj0"]
+[ext_resource type="AudioStream" uid="uid://nujmc34nu44" path="res://footsteps.wav" id="6_ygs64"]
+[ext_resource type="PackedScene" uid="uid://4wdu5j1rruua" path="res://Modele/trash1.glb" id="7_l3fsw"]
+[ext_resource type="PackedScene" uid="uid://cqjo46bdscl06" path="res://Modele/uploads_files_5625009_Post_Apocalyptic_UAZ.glb" id="8_p3ck6"]
+[ext_resource type="PackedScene" uid="uid://dpyqy7paexhoe" path="res://uploads_files_4395511_EEB_015.glb" id="11_gamme"]
+[ext_resource type="PackedScene" uid="uid://xvccnlrtk4yg" path="res://uploads_files_6160160_Brick_Storefront_Buil_0526090009_texture.glb" id="11_h5w2f"]
+[ext_resource type="PackedScene" uid="uid://b8cuyfkx322b2" path="res://MoltenVK.xcframework/Roads/Roads/Models/Gas_station/Textures/uploads_files_3965925_WoodenGate001.glb" id="11_mfhj0"]
+[ext_resource type="PackedScene" uid="uid://cp3yantykoko1" path="res://MoltenVK.xcframework/Roads/Roads/Models/Gas_station/Textures/uploads_files_5432559_House_01.glb" id="12_0nvap"]
+[ext_resource type="PackedScene" uid="uid://dseiymk5tlu51" path="res://Modele/uploads_files_4353812_street-building-asset-pack-v1_high-rise-1.glb" id="12_8honx"]
+[ext_resource type="PackedScene" uid="uid://e3txd00y4pjq" path="res://uploads_files_5386146_OldHouse.glb" id="12_tdbbr"]
+[ext_resource type="PackedScene" uid="uid://c3r7tm0gk2cqp" path="res://Modele/uploads_files_3359724_old+house.glb" id="15_6cx4y"]
+[ext_resource type="ArrayMesh" uid="uid://dstayl43jg5gl" path="res://drogawiejska.res" id="15_ra7mw"]
+[ext_resource type="ArrayMesh" uid="uid://c3jn831e4b481" path="res://autobana.res" id="16_u6rrg"]
+[ext_resource type="PackedScene" uid="uid://cka35illq4dxu" path="res://MoltenVK.xcframework/Roads/Roads/Models/Gas_station/Textures/barrier.glb" id="21_mb5wc"]
+[ext_resource type="PackedScene" uid="uid://b34cra5ifhl1w" path="res://domek.glb" id="23_era0c"]
+[ext_resource type="PackedScene" uid="uid://3ra66ro0dtbv" path="res://Bike.tscn" id="25_8honx"]
+[ext_resource type="PackedScene" uid="uid://d1omod6qpf6ol" path="res://yamahaaerox.tscn" id="25_era0c"]
+[ext_resource type="PackedScene" uid="uid://c55ond3hi106f" path="res://gas_station.tscn" id="26_cqopq"]
+[ext_resource type="PackedScene" uid="uid://cnhwxtm6qo44u" path="res://laptop.tscn" id="29_yiisg"]
+[ext_resource type="PackedScene" uid="uid://rxyjhplhmfmo" path="res://mersus_office.glb" id="37_ygs64"]
+[ext_resource type="ArrayMesh" uid="uid://dpwmy2hdvikej" path="res://skutery/newaerox/aerox.obj" id="38_7a3u0"]
+[ext_resource type="PackedScene" uid="uid://bcc0by8kcfb65" path="res://MoltenVK.xcframework/Roads/Roads/Models/Gas_station/Textures/garage_scene.glb" id="38_mfhj0"]
+[ext_resource type="PackedScene" uid="uid://brexwpcvvv7ci" path="res://skutery/AprilliaSR50.tscn" id="39_66y2s"]
+[ext_resource type="PackedScene" uid="uid://dtl2tweeixpxf" path="res://MoltenVK.xcframework/Roads/Roads/Models/Gas_station/Textures/uploads_files_4567867_blok1.glb" id="40_7a3u0"]
+[ext_resource type="PackedScene" path="res://ScooterShop.tscn" id="40_66y2s"]
+[ext_resource type="PackedScene" uid="uid://cg6ttu8llidqy" path="res://skutery/NewAerox.tscn" id="41_0ncls"]
+[ext_resource type="PackedScene" uid="uid://dqcnvut6i0gp6" path="res://MoltenVK.xcframework/Roads/Roads/Models/Gas_station/Textures/uploads_files_5038242_3D+centrum+11.glb" id="41_66y2s"]
+[ext_resource type="PackedScene" uid="uid://brta1e6em8cyo" path="res://gas_price_sign.tscn" id="42_0ncls"]
+[ext_resource type="PackedScene" uid="uid://byan1dtm2wg22" path="res://PoliceCar.tscn" id="43_bf6l0"]
+[ext_resource type="PackedScene" uid="uid://cnpu7vf6nte8r" path="res://MoltenVK.xcframework/Roads/Roads/Models/Gas_station/Textures/forest.glb" id="45_qhj12"]
+[ext_resource type="PackedScene" uid="uid://cgriw6k10bed2" path="res://MoltenVK.xcframework/Roads/Roads/Models/Gas_station/Textures/road_safety_pole__low_poly_traffic_delineator.glb" id="47_5r4d6"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q3h2q"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o3xg3"]
+albedo_texture = ExtResource("1_o3xg3")
+uv1_scale = Vector3(50, 60, 60)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2x0e7"]
+size = Vector2(200, 200)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_53e27"]
+size = Vector3(224.48, 0.1, 308.58594)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kevww"]
+albedo_texture = ExtResource("2_2x0e7")
+uv1_scale = Vector3(1, 100, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_gkg1b"]
+size = Vector2(9.815, 200)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xpt0u"]
+sky_top_color = Color(0.388, 0.584, 0.86, 1)
+sky_horizon_color = Color(0.722, 0.776, 0.827, 1)
+ground_bottom_color = Color(0.24, 0.22, 0.19, 1)
+ground_horizon_color = Color(0.722, 0.776, 0.827, 1)
+
+[sub_resource type="Sky" id="Sky_uls0g"]
+sky_material = SubResource("ProceduralSkyMaterial_xpt0u")
+
+[sub_resource type="Environment" id="Environment_q3h2q"]
+background_mode = 2
+sky = SubResource("Sky_uls0g")
+tonemap_mode = 3
+adjustment_enabled = true
+adjustment_contrast = 1.05
+adjustment_saturation = 1.1
+
+[node name="SwiatGry" type="Node3D" unique_id=1299333306]
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=-1154526274]
+_spawnable_scenes = PackedStringArray("uid://be8n6q2u3l5j5", "uid://d1omod6qpf6ol")
+spawn_path = NodePath("..")
+
+[node name="Basic FPS Player" type="CharacterBody3D" parent="." unique_id=2115014443 groups=["player"]]
+transform = Transform3D(0.9784766, 0, 0.20635779, 0, 0.69010043, 0, -0.20635779, 0, 0.9784766, 0, 1.491492, -97.54747)
+script = ExtResource("1_xpt0u")
+beer_pos = Vector3(0.5, -0.4, -0.507)
+beer_scale = Vector3(0.2, 0.2, 0.2)
+energy_pos = Vector3(0.403, -0.409, -0.406)
+energy_rot = Vector3(0, -28.9, 0)
+energy_scale = Vector3(0.2, 0.2, 0.2)
+gas_pos = Vector3(1.257, -0.271, -1.372)
+gas_rot = Vector3(0, 178.5, 0)
+cig_pos = Vector3(0.062, -0.604, -0.898)
+cig_rot = Vector3(0, 167.5, 0)
+cig_scale = Vector3(0.1, 0.1, 0.1)
+SPEED = 2.5
+IN_AIR_SPEED = 1.0
+IN_AIR_ACCEL = 1.0
+JUMP_VELOCITY = 2.4
+metadata/_custom_type_script = "uid://10ieormhysus"
+
+[node name="Head" parent="Basic FPS Player" unique_id=55639951 instance=ExtResource("2_uls0g")]
+transform = Transform3D(-0.96944535, 0, 0.24530737, 0, 1, 0, -0.24530737, 0, -0.96944535, -0.012542009, 0.00917387, 0.0076141357)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Basic FPS Player" unique_id=1274817555]
+shape = SubResource("CapsuleShape3D_q3h2q")
+
+[node name="PlayerUI" type="CanvasLayer" parent="Basic FPS Player" unique_id=1780473135]
+
+[node name="InteractionPromptLabel" type="Label" parent="Basic FPS Player/PlayerUI" unique_id=1601060191]
+visible = false
+anchors_preset = -1
+anchor_left = 0.50200003
+anchor_top = 0.521
+anchor_right = 0.50200003
+anchor_bottom = 0.521
+offset_left = -52.840088
+offset_top = -11.680054
+offset_right = 52.159912
+offset_bottom = 11.319946
+grow_horizontal = 2
+grow_vertical = 2
+text = "[ Kliknij PPM ]"
+
+[node name="InventoryBar" type="HBoxContainer" parent="Basic FPS Player/PlayerUI" unique_id=429398876]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Focus" type="Sprite2D" parent="Basic FPS Player/PlayerUI/InventoryBar" unique_id=1313881520]
+position = Vector2(170, -474)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("3_cqopq")
+
+[node name="Panel" type="Panel" parent="Basic FPS Player/PlayerUI/InventoryBar" unique_id=1746046595]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Panel2" type="Panel" parent="Basic FPS Player/PlayerUI/InventoryBar" unique_id=1767990274]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Panel3" type="Panel" parent="Basic FPS Player/PlayerUI/InventoryBar" unique_id=19454531]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Panel4" type="Panel" parent="Basic FPS Player/PlayerUI/InventoryBar" unique_id=50367929]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Panel5" type="Panel" parent="Basic FPS Player/PlayerUI/InventoryBar" unique_id=1691921007]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="RefuelContainer" type="VBoxContainer" parent="Basic FPS Player/PlayerUI" unique_id=47313928]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = 20.0
+offset_right = 160.0
+offset_bottom = 78.90503
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RefuelLabel" type="Label" parent="Basic FPS Player/PlayerUI/RefuelContainer" unique_id=1758097441]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_bo80c")
+theme_override_font_sizes/font_size = 19
+text = "Tankowanie . . ."
+
+[node name="RefuelBar" type="ProgressBar" parent="Basic FPS Player/PlayerUI/RefuelContainer" unique_id=365036004]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="MoneyLabel" type="Label" parent="Basic FPS Player/PlayerUI" unique_id=1062936815]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 257.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("4_bo80c")
+theme_override_font_sizes/font_size = 25
+text = "Saldo: 1000.00 zł"
+
+[node name="PauseUI" type="CanvasLayer" parent="Basic FPS Player" unique_id=2070159373]
+
+[node name="PauseBackground" type="ColorRect" parent="Basic FPS Player/PauseUI" unique_id=1265452945]
+unique_name_in_owner = true
+process_mode = 3
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.37254903)
+
+[node name="PauseButtons" type="VBoxContainer" parent="Basic FPS Player/PauseUI/PauseBackground" unique_id=853502088]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -352.875
+offset_top = -220.375
+offset_right = 352.875
+offset_bottom = 220.375
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="WrocButton" type="Button" parent="Basic FPS Player/PauseUI/PauseBackground/PauseButtons" unique_id=1712402618]
+process_mode = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_bo80c")
+theme_override_font_sizes/font_size = 25
+text = "WRÓĆ DO GRY"
+
+[node name="UstawieniaButton" type="Button" parent="Basic FPS Player/PauseUI/PauseBackground/PauseButtons" unique_id=1661757970]
+process_mode = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_bo80c")
+theme_override_font_sizes/font_size = 26
+text = "USTAWIENIA"
+
+[node name="WyjscieButton" type="Button" parent="Basic FPS Player/PauseUI/PauseBackground/PauseButtons" unique_id=1070700953]
+process_mode = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_bo80c")
+theme_override_font_sizes/font_size = 25
+text = "WYJDŹ DO MENU"
+
+[node name="OptionsPanel" type="PanelContainer" parent="Basic FPS Player/PauseUI/PauseBackground" unique_id=987654321]
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -250.0
+offset_right = 300.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OptionsLayout" type="VBoxContainer" parent="Basic FPS Player/PauseUI/PauseBackground/OptionsPanel" unique_id=987654322]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Basic FPS Player/PauseUI/PauseBackground/OptionsPanel/OptionsLayout" unique_id=987654323]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_bo80c")
+theme_override_font_sizes/font_size = 40
+text = "OPCJE"
+horizontal_alignment = 1
+
+[node name="MusicLabel" type="Label" parent="Basic FPS Player/PauseUI/PauseBackground/OptionsPanel/OptionsLayout" unique_id=987654324]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_bo80c")
+theme_override_font_sizes/font_size = 28
+text = "Głośność Muzyki"
+
+[node name="MusicSlider" type="HSlider" parent="Basic FPS Player/PauseUI/PauseBackground/OptionsPanel/OptionsLayout" unique_id=987654325]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+max_value = 1.0
+step = 0.1
+value = 0.8
+
+[node name="SFXLabel" type="Label" parent="Basic FPS Player/PauseUI/PauseBackground/OptionsPanel/OptionsLayout" unique_id=987654326]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_bo80c")
+theme_override_font_sizes/font_size = 28
+text = "Głośność Dźwięków"
+
+[node name="SFXSlider" type="HSlider" parent="Basic FPS Player/PauseUI/PauseBackground/OptionsPanel/OptionsLayout" unique_id=987654327]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+max_value = 1.0
+step = 0.1
+value = 0.8
+
+[node name="GraphicsLabel" type="Label" parent="Basic FPS Player/PauseUI/PauseBackground/OptionsPanel/OptionsLayout" unique_id=987654328]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_bo80c")
+theme_override_font_sizes/font_size = 28
+text = "Jakość Grafiki"
+
+[node name="GraphicOptions" type="OptionButton" parent="Basic FPS Player/PauseUI/PauseBackground/OptionsPanel/OptionsLayout" unique_id=987654329]
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "Niska (Szybka)"
+popup/item_0/id = 0
+popup/item_1/text = "Średnia (Zalecana)"
+popup/item_1/id = 1
+popup/item_2/text = "Wysoka (Bajkowa)"
+popup/item_2/id = 2
+
+[node name="WsteczButton" type="Button" parent="Basic FPS Player/PauseUI/PauseBackground/OptionsPanel/OptionsLayout" unique_id=987654330]
+process_mode = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_bo80c")
+theme_override_font_sizes/font_size = 25
+text = "WSTECZ"
+
+[node name="ClickSoundPlayer" type="AudioStreamPlayer" parent="Basic FPS Player/PauseUI" unique_id=2068028696]
+process_mode = 2
+stream = ExtResource("6_mfhj0")
+
+[node name="FootstepPlayer" type="AudioStreamPlayer3D" parent="Basic FPS Player" unique_id=550398518]
+stream = ExtResource("6_ygs64")
+max_db = -4.572
+
+[node name="FootstepTimer" type="Timer" parent="Basic FPS Player" unique_id=261608721]
+wait_time = 0.75
+one_shot = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1137519417]
+transform = Transform3D(1, 0, 0, 0, 0.8471219, 0.5313986, 0, -0.5313986, 0.8471219, 5.3878155, 35.699986, 0)
+light_color = Color(1, 0.961, 0.824, 1)
+light_energy = 1.5
+shadow_enabled = true
+directional_shadow_mode = 0
+directional_shadow_max_distance = 60.0
+
+[node name="PodlogaTrawa" type="StaticBody3D" parent="." unique_id=95414108]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PodlogaTrawa" unique_id=1948828758]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022827148, -0.0073661804, 0.007493973)
+material_override = SubResource("StandardMaterial3D_o3xg3")
+lod_bias = 128.0
+mesh = SubResource("PlaneMesh_2x0e7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PodlogaTrawa/MeshInstance3D" unique_id=502794643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -101.63711)
+material_override = SubResource("StandardMaterial3D_o3xg3")
+mesh = SubResource("PlaneMesh_2x0e7")
+
+[node name="uploads_files_5386146_OldHouse" parent="PodlogaTrawa/MeshInstance3D/MeshInstance3D" unique_id=56836084 instance=ExtResource("12_tdbbr")]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 2.631779, 0.419617, -94.5323)
+
+[node name="Drogawiejska4" type="MeshInstance3D" parent="PodlogaTrawa/MeshInstance3D/MeshInstance3D" unique_id=1625095202]
+transform = Transform3D(2.8760934, 0, 0.0025656782, 0, 1, 0, -0.0073791593, 0, 0.9999967, 63.91905, 0.061485052, -34.864037)
+mesh = ExtResource("15_ra7mw")
+
+[node name="Drogawiejska4" type="MeshInstance3D" parent="PodlogaTrawa/MeshInstance3D/MeshInstance3D/Drogawiejska4" unique_id=244988848]
+transform = Transform3D(2.4672508, 0, 0.0025656782, 0, 1, 0, -0.0063301967, 0, 0.9999967, -12.487925, 0.061485052, 1.387142)
+mesh = ExtResource("15_ra7mw")
+
+[node name="uploads_files_4353812_street-building-asset-pack-v1_high-rise-1" parent="PodlogaTrawa/MeshInstance3D/MeshInstance3D" unique_id=1590991419 instance=ExtResource("12_8honx")]
+transform = Transform3D(-0.020772165, 0, -0.49956834, 0, 0.5, 0, 0.49956834, 0, -0.020772165, 29.497822, 3.2109146, 35.76734)
+
+[node name="uploads_files_4353812_street-building-asset-pack-v1_high-rise-1" parent="PodlogaTrawa/MeshInstance3D/MeshInstance3D/uploads_files_4353812_street-building-asset-pack-v1_high-rise-1" unique_id=360593581 instance=ExtResource("12_8honx")]
+transform = Transform3D(-0.00040054694, 0, -0.49999994, 0, 0.5, 0, 0.84999996, 0, -0.0002356153, 26.509338, -3.4438667, 88.24378)
+
+[node name="uploads_files_5432559_House_01" parent="PodlogaTrawa/MeshInstance3D/MeshInstance3D" unique_id=1899583518 instance=ExtResource("12_0nvap")]
+transform = Transform3D(0.017362539, 0, 0.49969846, 0, 0.5, 0, -0.49969846, 0, 0.017362539, 54.206738, -0.43546367, 13.961032)
+
+[node name="uploads_files_5432559_House_01" parent="PodlogaTrawa/MeshInstance3D/MeshInstance3D/uploads_files_5432559_House_01" unique_id=120257011 instance=ExtResource("12_0nvap")]
+transform = Transform3D(0.99998665, 0, 0.0051836073, 0, 1, 0, -0.0051836073, 0, 0.99998665, 8.509828, -0.111317396, 0.19724065)
+
+[node name="uploads_files_5432559_House_01" parent="PodlogaTrawa/MeshInstance3D/MeshInstance3D/uploads_files_5432559_House_01/uploads_files_5432559_House_01" unique_id=906593407 instance=ExtResource("12_0nvap")]
+transform = Transform3D(0.99998665, 0, 0.0051836073, 0, 1, 0, -0.0051836073, 0, 0.99998665, 8.509828, -0.111317396, 0.19724065)
+
+[node name="uploads_files_5432559_House_01" parent="PodlogaTrawa/MeshInstance3D/MeshInstance3D/uploads_files_5432559_House_01/uploads_files_5432559_House_01/uploads_files_5432559_House_01" unique_id=378481240 instance=ExtResource("12_0nvap")]
+transform = Transform3D(0.99998665, 0, 0.0051836073, 0, 1, 0, -0.0051836073, 0, 0.99998665, 8.509828, -0.111317396, 0.19724065)
+
+[node name="uploads_files_5432559_House_01" parent="PodlogaTrawa/MeshInstance3D/MeshInstance3D/uploads_files_5432559_House_01/uploads_files_5432559_House_01/uploads_files_5432559_House_01/uploads_files_5432559_House_01" unique_id=1738456621 instance=ExtResource("12_0nvap")]
+transform = Transform3D(0.99998665, 0, 0.0051836073, 0, 1, 0, -0.0051836073, 0, 0.99998665, 8.069995, -0.111317396, 0.1995206)
+
+[node name="uploads_files_5432559_House_02" parent="PodlogaTrawa/MeshInstance3D/MeshInstance3D/uploads_files_5432559_House_01" unique_id=959508046 instance=ExtResource("12_0nvap")]
+transform = Transform3D(0.99915254, 0, 0.041160695, 0, 1, 0, -0.041160695, 0, 0.99915254, -2.0213969, -0.43546367, 20.26575)
+
+[node name="uploads_files_5432559_House_01" parent="PodlogaTrawa/MeshInstance3D/MeshInstance3D/uploads_files_5432559_House_01/uploads_files_5432559_House_02" unique_id=1314196371 instance=ExtResource("12_0nvap")]
+transform = Transform3D(0.99998665, 0, 0.0051836073, 0, 1, 0, -0.0051836073, 0, 0.99998665, 8.509828, -0.111317396, 0.19724065)
+
+[node name="uploads_files_5432559_House_01" parent="PodlogaTrawa/MeshInstance3D/MeshInstance3D/uploads_files_5432559_House_01/uploads_files_5432559_House_02/uploads_files_5432559_House_01" unique_id=1781692674 instance=ExtResource("12_0nvap")]
+transform = Transform3D(0.99998665, 0, 0.0051836073, 0, 1, 0, -0.0051836073, 0, 0.99998665, 8.509828, -0.111317396, 0.19724065)
+
+[node name="uploads_files_5432559_House_01" parent="PodlogaTrawa/MeshInstance3D/MeshInstance3D/uploads_files_5432559_House_01/uploads_files_5432559_House_02/uploads_files_5432559_House_01/uploads_files_5432559_House_01" unique_id=733117543 instance=ExtResource("12_0nvap")]
+transform = Transform3D(0.99998665, 0, 0.0051836073, 0, 1, 0, -0.0051836073, 0, 0.99998665, 8.509828, -0.111317396, 0.19724065)
+
+[node name="uploads_files_5432559_House_01" parent="PodlogaTrawa/MeshInstance3D/MeshInstance3D/uploads_files_5432559_House_01/uploads_files_5432559_House_02/uploads_files_5432559_House_01/uploads_files_5432559_House_01/uploads_files_5432559_House_01" unique_id=405243395 instance=ExtResource("12_0nvap")]
+transform = Transform3D(0.99998665, 0, 0.0051836073, 0, 1, 0, -0.0051836073, 0, 0.99998665, 8.069995, -0.111317396, 0.1995206)
+
+[node name="uploads_files_5432559_House_02" parent="PodlogaTrawa/MeshInstance3D/MeshInstance3D/uploads_files_5432559_House_01/uploads_files_5432559_House_02" unique_id=935564974 instance=ExtResource("12_0nvap")]
+transform = Transform3D(0.99915254, 0, 0.041160695, 0, 1, 0, -0.041160695, 0, 0.99915254, 3.6536047, 0.2945168, 17.257994)
+
+[node name="uploads_files_5432559_House_01" parent="PodlogaTrawa/MeshInstance3D/MeshInstance3D/uploads_files_5432559_House_01/uploads_files_5432559_House_02/uploads_files_5432559_House_02" unique_id=225342608 instance=ExtResource("12_0nvap")]
+transform = Transform3D(0.99998665, 0, 0.0051836073, 0, 1, 0, -0.0051836073, 0, 0.99998665, 8.509828, -0.111317396, 0.19724065)
+
+[node name="uploads_files_5432559_House_01" parent="PodlogaTrawa/MeshInstance3D/MeshInstance3D/uploads_files_5432559_House_01/uploads_files_5432559_House_02/uploads_files_5432559_House_02/uploads_files_5432559_House_01" unique_id=435999619 instance=ExtResource("12_0nvap")]
+transform = Transform3D(0.99998665, 0, 0.0051836073, 0, 1, 0, -0.0051836073, 0, 0.99998665, 8.509828, -0.111317396, 0.19724065)
+
+[node name="uploads_files_5432559_House_01" parent="PodlogaTrawa/MeshInstance3D/MeshInstance3D/uploads_files_5432559_House_01/uploads_files_5432559_House_02/uploads_files_5432559_House_02/uploads_files_5432559_House_01/uploads_files_5432559_House_01" unique_id=2136035533 instance=ExtResource("12_0nvap")]
+transform = Transform3D(0.99998665, 0, 0.0051836073, 0, 1, 0, -0.0051836073, 0, 0.99998665, 8.509828, -0.111317396, 0.19724065)
+
+[node name="uploads_files_5432559_House_01" parent="PodlogaTrawa/MeshInstance3D/MeshInstance3D/uploads_files_5432559_House_01/uploads_files_5432559_House_02/uploads_files_5432559_House_02/uploads_files_5432559_House_01/uploads_files_5432559_House_01/uploads_files_5432559_House_01" unique_id=1498541051 instance=ExtResource("12_0nvap")]
+transform = Transform3D(0.99998665, 0, 0.0051836073, 0, 1, 0, -0.0051836073, 0, 0.99998665, 8.069995, -0.111317396, 0.1995206)
+
+[node name="uploads_files_6384330_Old_sideHouse" parent="PodlogaTrawa/MeshInstance3D" unique_id=2122684167 instance=ExtResource("4_ord0c")]
+transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 7.9393873, 0.06468269, -81.08396)
+
+[node name="trash3" parent="PodlogaTrawa/MeshInstance3D" unique_id=1347919891 instance=ExtResource("5_d071x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.770489, 0.023181058, -81.67388)
+
+[node name="trash4" parent="PodlogaTrawa/MeshInstance3D" unique_id=1584544330 instance=ExtResource("5_d071x")]
+transform = Transform3D(-0.24132913, 0, 0.9704433, 0, 1, 0, -0.9704433, 0, -0.24132913, 17.015944, 0.054389335, -81.983315)
+
+[node name="trash5" parent="PodlogaTrawa/MeshInstance3D" unique_id=543475365 instance=ExtResource("5_d071x")]
+transform = Transform3D(-0.93549955, 0, 0.35332793, 0, 1, 0, -0.35332793, 0, -0.93549955, 18.83194, 0.054389335, -81.71891)
+
+[node name="trash6" parent="PodlogaTrawa/MeshInstance3D" unique_id=330736248 instance=ExtResource("5_d071x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.623899, 0.054389335, -82.48506)
+
+[node name="trash7" parent="PodlogaTrawa/MeshInstance3D" unique_id=1961501773 instance=ExtResource("5_d071x")]
+transform = Transform3D(-0.62010765, 0, 0.78451675, 0, 1, 0, -0.78451675, 0, -0.62010765, 19.395222, 0.09597692, -82.23731)
+
+[node name="trash2" parent="PodlogaTrawa/MeshInstance3D" unique_id=145075245 instance=ExtResource("6_epnf4")]
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 15.923929, 0.013788283, -83.21121)
+
+[node name="trash3" parent="PodlogaTrawa/MeshInstance3D/trash2" unique_id=192042307 instance=ExtResource("6_epnf4")]
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 15.914467, 0.007079363, -83.827965)
+
+[node name="trash2" parent="PodlogaTrawa/MeshInstance3D/trash2/trash3" unique_id=210664329 instance=ExtResource("6_epnf4")]
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 15.914467, 0.007079363, -83.827965)
+
+[node name="trash4" parent="PodlogaTrawa/MeshInstance3D/trash2" unique_id=1344258352 instance=ExtResource("6_epnf4")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.017547607, 0.03913468, -3.4425163)
+
+[node name="trash1" parent="PodlogaTrawa/MeshInstance3D" unique_id=103973650 instance=ExtResource("7_l3fsw")]
+transform = Transform3D(-0.42872292, 0, 0.2572871, 0, 0.5, 0, -0.2572871, 0, -0.42872292, 18.896841, -0.053536415, -82.83365)
+
+[node name="uploads_files_5625009_Post_Apocalyptic_UAZ" parent="PodlogaTrawa/MeshInstance3D" unique_id=954248599 instance=ExtResource("8_p3ck6")]
+transform = Transform3D(0.26318407, 0, -0.14399359, 0, 0.3, 0, 0.14399359, 0, 0.26318407, 18.211742, -0.018773139, -81.720436)
+
+[node name="uploads_files_6384330_Old_sideHouse2" parent="PodlogaTrawa/MeshInstance3D" unique_id=1622951288 instance=ExtResource("4_ord0c")]
+transform = Transform3D(-0.59971726, 0, 0.018417321, 0, 0.6, 0, -0.018417321, 0, -0.59971726, 21.464012, 0.093156695, -81.393524)
+
+[node name="uploads_files_6384330_Old_sideHouse2" parent="PodlogaTrawa/MeshInstance3D/uploads_files_6384330_Old_sideHouse2" unique_id=1843586241 instance=ExtResource("4_ord0c")]
+transform = Transform3D(-0.79978794, 0, -0.018415071, 0, 0.80000025, 0, 0.018415071, 0, -0.79978794, 13.504084, 0.093156725, -7.169922)
+
+[node name="trash8" parent="PodlogaTrawa/MeshInstance3D" unique_id=1991534588 instance=ExtResource("7_l3fsw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.226831, 0.06275806, -82.006584)
+
+[node name="trash9" parent="PodlogaTrawa/MeshInstance3D" unique_id=1678835235 instance=ExtResource("7_l3fsw")]
+transform = Transform3D(-0.9438644, 0, 0.3303331, 0, 1, 0, -0.3303331, 0, -0.9438644, 29.19503, 0.0627583, -83.23167)
+
+[node name="trash10" parent="PodlogaTrawa/MeshInstance3D" unique_id=1613770834 instance=ExtResource("7_l3fsw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.68028, 0.032303244, -75.60647)
+
+[node name="uploads_files_4395511_EEB_016" parent="PodlogaTrawa/MeshInstance3D" unique_id=1884355823 instance=ExtResource("11_gamme")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 47.59045, 0.08860946, -82.31829)
+
+[node name="uploads_files_4395511_EEB_016" parent="PodlogaTrawa/MeshInstance3D/uploads_files_4395511_EEB_016" unique_id=898657342 instance=ExtResource("11_gamme")]
+transform = Transform3D(0.9998842, 0, -0.015218683, 0, 1, 0, 0.015218683, 0, 0.9998842, 46.170746, 0.08860946, 123.6527)
+
+[node name="uploads_files_4395511_EEB_016" parent="PodlogaTrawa/MeshInstance3D/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016" unique_id=2127861071 instance=ExtResource("11_gamme")]
+transform = Transform3D(0.99996394, 0, -0.008499652, 0, 1, 0, 0.008499652, 0, 0.99996394, -24.157562, 0.08860946, 0.3970636)
+
+[node name="uploads_files_4395511_EEB_016" parent="PodlogaTrawa/MeshInstance3D/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016" unique_id=1346251759 instance=ExtResource("11_gamme")]
+transform = Transform3D(0.9998739, 0, 0.015881829, 0, 1, 0, -0.015881829, 0, 0.9998739, -24.40522, 0.08860946, 0.3718847)
+
+[node name="uploads_files_4395511_EEB_017" parent="PodlogaTrawa/MeshInstance3D/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016" unique_id=402461424 instance=ExtResource("11_gamme")]
+transform = Transform3D(0.99963933, 0, -0.02685739, 0, 1, 0, 0.02685739, 0, 0.99963933, -26.075048, 0.08860946, 0.02513647)
+
+[node name="uploads_files_4395511_EEB_016" parent="PodlogaTrawa/MeshInstance3D/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_017" unique_id=1755365137 instance=ExtResource("11_gamme")]
+transform = Transform3D(0.9996899, 0, -0.024903271, 0, 1, 0, 0.024903271, 0, 0.9996899, -24.40522, 0.08860946, 0.3718847)
+
+[node name="uploads_files_4395511_EEB_017" parent="PodlogaTrawa/MeshInstance3D/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016" unique_id=914193037 instance=ExtResource("11_gamme")]
+transform = Transform3D(-0.019127615, 0, -0.9998171, 0, 1, 0, 0.9998171, 0, -0.019127615, -103.94504, 0.08860946, 112.3899)
+
+[node name="uploads_files_4395511_EEB_016" parent="PodlogaTrawa/MeshInstance3D/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_017" unique_id=598531128 instance=ExtResource("11_gamme")]
+transform = Transform3D(0.9997053, 0, 0.024275146, 0, 1, 0, -0.024275146, 0, 0.9997053, -24.157562, 0.08860946, 0.3970636)
+
+[node name="uploads_files_4395511_EEB_016" parent="PodlogaTrawa/MeshInstance3D/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_017/uploads_files_4395511_EEB_016" unique_id=2101664493 instance=ExtResource("11_gamme")]
+transform = Transform3D(0.9998739, 0, 0.015881829, 0, 1, 0, -0.015881829, 0, 0.9998739, -24.40522, 0.08860946, 0.3718847)
+
+[node name="uploads_files_4395511_EEB_016" parent="PodlogaTrawa/MeshInstance3D/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_017/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016" unique_id=824267919 instance=ExtResource("11_gamme")]
+transform = Transform3D(0.9996899, 0, -0.024903271, 0, 1, 0, 0.024903271, 0, 0.9996899, -24.40522, 0.08860946, 0.3718847)
+
+[node name="uploads_files_4395511_EEB_016" parent="PodlogaTrawa/MeshInstance3D/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_017/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016" unique_id=1742737384 instance=ExtResource("11_gamme")]
+transform = Transform3D(0.9996899, 0, -0.024903271, 0, 1, 0, 0.024903271, 0, 0.9996899, -25.138165, 0.08860946, 0.14786278)
+
+[node name="uploads_files_4395511_EEB_017" parent="PodlogaTrawa/MeshInstance3D/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_017" unique_id=1017452605 instance=ExtResource("11_gamme")]
+transform = Transform3D(-0.019127615, 0, -0.9998171, 0, 1, 0, 0.9998171, 0, -0.019127615, 20.988544, 0.08860946, -26.744326)
+
+[node name="uploads_files_4395511_EEB_016" parent="PodlogaTrawa/MeshInstance3D/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_017/uploads_files_4395511_EEB_017" unique_id=173450659 instance=ExtResource("11_gamme")]
+transform = Transform3D(0.9997053, 0, 0.024275146, 0, 1, 0, -0.024275146, 0, 0.9997053, -24.157562, 0.08860946, 0.3970636)
+
+[node name="uploads_files_4395511_EEB_016" parent="PodlogaTrawa/MeshInstance3D/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_017/uploads_files_4395511_EEB_017/uploads_files_4395511_EEB_016" unique_id=686688161 instance=ExtResource("11_gamme")]
+transform = Transform3D(0.9998739, 0, 0.015881829, 0, 1, 0, -0.015881829, 0, 0.9998739, -24.40522, 0.08860946, 0.3718847)
+
+[node name="uploads_files_4395511_EEB_016" parent="PodlogaTrawa/MeshInstance3D/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_017/uploads_files_4395511_EEB_017/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016" unique_id=1685714354 instance=ExtResource("11_gamme")]
+transform = Transform3D(0.9996899, 0, -0.024903271, 0, 1, 0, 0.024903271, 0, 0.9996899, -24.40522, 0.08860946, 0.3718847)
+
+[node name="uploads_files_4395511_EEB_017" parent="PodlogaTrawa/MeshInstance3D/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_017/uploads_files_4395511_EEB_017" unique_id=856193927 instance=ExtResource("11_gamme")]
+transform = Transform3D(0.054009132, 0, -0.99854046, 0, 1, 0, 0.99854046, 0, 0.054009132, -76.4391, 0.08860946, 106.7577)
+
+[node name="uploads_files_4395511_EEB_016" parent="PodlogaTrawa/MeshInstance3D/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_017/uploads_files_4395511_EEB_017/uploads_files_4395511_EEB_017" unique_id=1901976659 instance=ExtResource("11_gamme")]
+transform = Transform3D(0.9997053, 0, 0.024275146, 0, 1, 0, -0.024275146, 0, 0.9997053, -24.157562, 0.08860946, 0.3970636)
+
+[node name="uploads_files_4395511_EEB_016" parent="PodlogaTrawa/MeshInstance3D/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_017/uploads_files_4395511_EEB_017/uploads_files_4395511_EEB_017/uploads_files_4395511_EEB_016" unique_id=1984680581 instance=ExtResource("11_gamme")]
+transform = Transform3D(0.9998739, 0, 0.015881829, 0, 1, 0, -0.015881829, 0, 0.9998739, -24.40522, 0.08860946, 0.3718847)
+
+[node name="uploads_files_4395511_EEB_016" parent="PodlogaTrawa/MeshInstance3D/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_017/uploads_files_4395511_EEB_017/uploads_files_4395511_EEB_017/uploads_files_4395511_EEB_016/uploads_files_4395511_EEB_016" unique_id=2092420045 instance=ExtResource("11_gamme")]
+transform = Transform3D(0.9996899, 0, -0.024903271, 0, 1, 0, 0.024903271, 0, 0.9996899, -24.40522, 0.08860946, 0.3718847)
+
+[node name="Drogawiejska" type="MeshInstance3D" parent="PodlogaTrawa/MeshInstance3D" unique_id=815918913]
+transform = Transform3D(-2.4463835, 0, 0.013101795, 0, 0.29343954, 0, -0.04496533, 0, -0.71283054, 27.590828, 0.057588577, -51.62184)
+mesh = ExtResource("15_ra7mw")
+
+[node name="Drogawiejska" type="MeshInstance3D" parent="PodlogaTrawa/MeshInstance3D/Drogawiejska" unique_id=1197092325]
+transform = Transform3D(1.0252571, 0, 0.006235417, 0, 0.15898445, 0, -0.0064419657, 0, 0.9923367, -9.228862, -0.053299263, 0.07587433)
+mesh = ExtResource("15_ra7mw")
+
+[node name="Drogawiejska" type="MeshInstance3D" parent="PodlogaTrawa/MeshInstance3D/Drogawiejska/Drogawiejska" unique_id=731547206]
+transform = Transform3D(0.01001324, 0, -0.41215926, 0, 0.16109017, 0, 13.65994, 0, 0.00030228868, -7.8710155, 0.97428924, -89.05727)
+mesh = ExtResource("15_ra7mw")
+
+[node name="Drogawiejska2" type="MeshInstance3D" parent="PodlogaTrawa/MeshInstance3D/Drogawiejska" unique_id=481883198]
+transform = Transform3D(-1.9920295, 0, 0.014469161, 0, 0.29344046, 0, -0.040962055, 0, -0.70366883, -16.82063, 0.13553154, -73.8533)
+mesh = ExtResource("15_ra7mw")
+
+[node name="Drogawiejska2" type="MeshInstance3D" parent="PodlogaTrawa/MeshInstance3D" unique_id=1125327171]
+transform = Transform3D(-0.053729728, 0, 1.0677812, 0, 0.1597322, 0, -5.2353315, 0, -0.010958856, 69.50168, 0.008395195, -44.131924)
+mesh = ExtResource("15_ra7mw")
+
+[node name="Drogawiejska3" type="MeshInstance3D" parent="PodlogaTrawa/MeshInstance3D" unique_id=325076827]
+transform = Transform3D(-0.04217498, 0, -0.99987936, 0, 1, 0, 2.7149024, 0, -0.015532747, -23.850962, 0.061485052, 26.631958)
+mesh = ExtResource("15_ra7mw")
+
+[node name="Drogawiejska3" type="MeshInstance3D" parent="PodlogaTrawa/MeshInstance3D/Drogawiejska3" unique_id=32291082]
+transform = Transform3D(0.008252244, 0, -0.3947671, 0, 0.77837574, 0, 1.4503329, 0, 0.0022461792, -8.201353, 0.22762561, 14.832491)
+mesh = ExtResource("15_ra7mw")
+
+[node name="Drogawiejska4" type="MeshInstance3D" parent="PodlogaTrawa/MeshInstance3D" unique_id=1243937422]
+transform = Transform3D(3.4300227, 0, -0.039155126, 0, 1, 0, 0.13440603, 0, 0.9992331, -4.357373, 0.061485052, -57.70661)
+mesh = ExtResource("15_ra7mw")
+
+[node name="Sketchfab_Scene" parent="PodlogaTrawa/MeshInstance3D" unique_id=733220596 instance=ExtResource("21_mb5wc")]
+transform = Transform3D(-0.023873795, 0, -0.999715, 0, 1, 0, 0.999715, 0, -0.023873795, 47.440544, 0.05736637, -67.10891)
+
+[node name="Sketchfab_Scene" parent="PodlogaTrawa/MeshInstance3D/Sketchfab_Scene" unique_id=928744726 instance=ExtResource("21_mb5wc")]
+transform = Transform3D(-0.023873795, 0, -0.999715, 0, 1, 0, 0.999715, 0, -0.023873795, 2.3028834, -0.075181484, 2.6020262)
+
+[node name="Sketchfab_Scene" parent="PodlogaTrawa/MeshInstance3D/Sketchfab_Scene/Sketchfab_Scene" unique_id=1068981940 instance=ExtResource("21_mb5wc")]
+transform = Transform3D(-0.999481, 0, -0.032213204, 0, 1, 0, 0.032213204, 0, -0.999481, -0.05695176, -0.075181484, -4.2371316)
+
+[node name="Sketchfab_Scene" parent="PodlogaTrawa/MeshInstance3D/Sketchfab_Scene/Sketchfab_Scene/Sketchfab_Scene" unique_id=1715789063 instance=ExtResource("21_mb5wc")]
+transform = Transform3D(-0.999481, 0, -0.032213204, 0, 1, 0, 0.032213204, 0, -0.999481, 3.764654, -0.075181484, 0.021700392)
+
+[node name="Autobana" type="MeshInstance3D" parent="PodlogaTrawa/MeshInstance3D" unique_id=1508310415]
+transform = Transform3D(8.60251, 0, -0.0051778257, 0, 0.96320903, 0, 0.046244264, 0, 0.96319515, 71.40126, 0.0845555, 4.639217)
+mesh = ExtResource("16_u6rrg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PodlogaTrawa" unique_id=543840641]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -53.37753)
+shape = SubResource("BoxShape3D_53e27")
+
+[node name="uploads_files_4353812_street-building-asset-pack-v1_high-rise-1" parent="PodlogaTrawa" unique_id=2089824407 instance=ExtResource("12_8honx")]
+transform = Transform3D(0.49996203, 0, -0.006160856, 0, 0.5, 0, 0.006160856, 0, 0.49996203, 37.46908, 3.2109146, -82.16215)
+
+[node name="uploads_files_4353812_street-building-asset-pack-v1_high-rise-1" parent="PodlogaTrawa/uploads_files_4353812_street-building-asset-pack-v1_high-rise-1" unique_id=809922619 instance=ExtResource("12_8honx")]
+transform = Transform3D(0.99988097, 0, 0.01542805, 0, 1, 0, -0.01542805, 0, 0.99988097, 14.978414, -0.47210598, -164.93578)
+
+[node name="uploads_files_4353812_street-building-asset-pack-v1_high-rise-2" parent="PodlogaTrawa" unique_id=1181071930 instance=ExtResource("12_8honx")]
+transform = Transform3D(-0.49992913, 0, 0.008420765, 0, 0.5, 0, -0.008420765, 0, -0.49992913, 45.723797, 2.7184134, -74.72332)
+
+[node name="uploads_files_4353812_street-building-asset-pack-v1_high-rise-2" parent="PodlogaTrawa/uploads_files_4353812_street-building-asset-pack-v1_high-rise-2" unique_id=784495710 instance=ExtResource("12_8honx")]
+transform = Transform3D(0.499818, 0, -0.013498484, 0, 0.5, 0, 0.013498484, 0, 0.499818, 55.12561, -2.4749603, 2.0576172)
+
+[node name="uploads_files_4353812_street-building-asset-pack-v1_high-rise-2" parent="PodlogaTrawa/uploads_files_4353812_street-building-asset-pack-v1_high-rise-2/uploads_files_4353812_street-building-asset-pack-v1_high-rise-2" unique_id=524415214 instance=ExtResource("12_8honx")]
+transform = Transform3D(-0.06814917, 0, 1.4984511, 0, 1.5, 0, -1.4984511, 0, -0.06814917, -206.59958, 3.1750755, -64.66556)
+
+[node name="uploads_files_4353812_street-building-asset-pack-v1_high-rise-2" parent="PodlogaTrawa/uploads_files_4353812_street-building-asset-pack-v1_high-rise-2/uploads_files_4353812_street-building-asset-pack-v1_high-rise-2/uploads_files_4353812_street-building-asset-pack-v1_high-rise-2" unique_id=1819293116 instance=ExtResource("12_8honx")]
+transform = Transform3D(0.99996763, 0, -0.008045867, 0, 1, 0, 0.008045867, 0, 0.99996763, -27.672985, -0.07041299, -0.09630558)
+
+[node name="uploads_files_4353812_street-building-asset-pack-v1_high-rise-2" parent="PodlogaTrawa/uploads_files_4353812_street-building-asset-pack-v1_high-rise-2/uploads_files_4353812_street-building-asset-pack-v1_high-rise-2/uploads_files_4353812_street-building-asset-pack-v1_high-rise-2/uploads_files_4353812_street-building-asset-pack-v1_high-rise-2" unique_id=1069945071 instance=ExtResource("12_8honx")]
+transform = Transform3D(0.017871171, 0, 0.99984026, 0, 1, 0, -0.99984026, 0, 0.017871171, -17.78486, 0.09867598, 14.769254)
+
+[node name="uploads_files_4353812_street-building-asset-pack-v1_high-rise-2" parent="PodlogaTrawa/uploads_files_4353812_street-building-asset-pack-v1_high-rise-2/uploads_files_4353812_street-building-asset-pack-v1_high-rise-2/uploads_files_4353812_street-building-asset-pack-v1_high-rise-2/uploads_files_4353812_street-building-asset-pack-v1_high-rise-2/uploads_files_4353812_street-building-asset-pack-v1_high-rise-2" unique_id=1430117636 instance=ExtResource("12_8honx")]
+transform = Transform3D(1.4984416, 0, 0.0683584, 0, 1.5, 0, -0.0683584, 0, 1.4984416, -11.475526, 2.946135, -239.10019)
+
+[node name="Autobana" type="MeshInstance3D" parent="PodlogaTrawa" unique_id=1290606333]
+transform = Transform3D(17.430578, 0, 0, 0, 1, 0, 0, 0, 2.4069343, 61.325596, 0.0772165, 88.756775)
+mesh = ExtResource("16_u6rrg")
+
+[node name="Autobana2" type="MeshInstance3D" parent="PodlogaTrawa" unique_id=279769418]
+transform = Transform3D(-0.019613415, 0, -0.999997, 0, 1, 0, 8.084741, 0, -0.0024259724, 77.357376, 0.07721602, 75.06484)
+mesh = ExtResource("16_u6rrg")
+
+[node name="droga" type="StaticBody3D" parent="." unique_id=1628588934]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="droga" unique_id=616955318]
+transform = Transform3D(0.35701418, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02400446, 0)
+material_override = SubResource("StandardMaterial3D_kevww")
+mesh = SubResource("PlaneMesh_gkg1b")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="droga/MeshInstance3D" unique_id=501183791]
+transform = Transform3D(0.35701418, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02400446, 0)
+material_override = SubResource("StandardMaterial3D_kevww")
+mesh = SubResource("PlaneMesh_gkg1b")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="droga/MeshInstance3D" unique_id=1526026558]
+transform = Transform3D(-0.0042619687, 0, -0.9999287, 0, 1, 0, 0.35698873, 0, -0.011937812, 101.20326, -0.0073046684, -78.732056)
+material_override = SubResource("StandardMaterial3D_kevww")
+mesh = SubResource("PlaneMesh_gkg1b")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="droga/MeshInstance3D/MeshInstance3D2" unique_id=2103500054]
+transform = Transform3D(0.35701418, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02400446, 0)
+material_override = SubResource("StandardMaterial3D_kevww")
+mesh = SubResource("PlaneMesh_gkg1b")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="droga/MeshInstance3D/MeshInstance3D2" unique_id=1265835535]
+transform = Transform3D(-1.163137, 0, -0.004820969, 0, 1, 0, -0.014475163, 0, 0.3873842, -85.31708, -0.0073046684, -46.965183)
+material_override = SubResource("StandardMaterial3D_kevww")
+mesh = SubResource("PlaneMesh_gkg1b")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="droga/MeshInstance3D/MeshInstance3D2/MeshInstance3D2" unique_id=824591124]
+transform = Transform3D(0.35701418, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02400446, 0)
+material_override = SubResource("StandardMaterial3D_kevww")
+mesh = SubResource("PlaneMesh_gkg1b")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="droga/MeshInstance3D/MeshInstance3D2/MeshInstance3D2/MeshInstance3D" unique_id=710253711]
+transform = Transform3D(-0.01790137, -0.00036190925, -1.7553756, -0.0030595965, 1.3650236, -0.00045535792, 3.0924444, 0.0013484492, -0.010161876, 160.56267, 0.017610587, 116.50972)
+material_override = SubResource("StandardMaterial3D_kevww")
+mesh = SubResource("PlaneMesh_gkg1b")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="droga/MeshInstance3D/MeshInstance3D2/MeshInstance3D2/MeshInstance3D/MeshInstance3D" unique_id=1102620991]
+transform = Transform3D(-2.5273883, -0.00036190927, 0.014448931, -0.0006467078, 1.3650236, 0.0015305075, -0.02363026, 0.0013484489, -1.5454357, 176.32455, 0.6183938, 75.20513)
+material_override = SubResource("StandardMaterial3D_kevww")
+mesh = SubResource("PlaneMesh_gkg1b")
+
+[node name="Autobana" type="MeshInstance3D" parent="droga/MeshInstance3D/MeshInstance3D2/MeshInstance3D2" unique_id=1566461783]
+transform = Transform3D(-20.725578, -1.0670325e-07, -0.16732706, -1.8080816e-06, 1.221527, -3.2811357e-08, -0.668707, 4.2856505e-09, 5.186054, -47.743042, 0.06781676, -115.35131)
+mesh = ExtResource("16_u6rrg")
+
+[node name="uploads_files_6160160_Brick_Storefront_Buil_0526090009_texture" parent="droga/MeshInstance3D" unique_id=544337570 instance=ExtResource("11_h5w2f")]
+transform = Transform3D(4.1995244, 0, -0.022551212, 0, 1.499, 0, 0.06318552, 0, 1.4988303, 74.11063, 1.5678501, -82.78197)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="droga" unique_id=1714548761]
+shape = SubResource("BoxShape3D_53e27")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1869007870]
+environment = SubResource("Environment_q3h2q")
+
+[node name="Sketchfab_Scene" parent="." unique_id=1959996718 instance=ExtResource("3_kevww")]
+transform = Transform3D(-0.99994284, 0, 0.010698549, 0, 1, 0, -0.010698549, 0, -0.99994284, -2.8579018, -0.0041019917, -97.1949)
+
+[node name="Sketchfab_Scene" parent="Sketchfab_Scene" unique_id=1072308474 instance=ExtResource("3_kevww")]
+transform = Transform3D(-0.99994284, 0, 0.010698549, 0, 1, 0, -0.010698549, 0, -0.99994284, -2.6499915, 0, -97.204185)
+
+[node name="Sketchfab_Scene2" parent="Sketchfab_Scene" unique_id=1812880827 instance=ExtResource("3_kevww")]
+transform = Transform3D(-0.99994284, 0, 0.010698549, 0, 1, 0, -0.010698549, 0, -0.99994284, -2.6342928, -0.0041017532, -97.19938)
+
+[node name="Sketchfab_Scene" parent="Sketchfab_Scene/Sketchfab_Scene2" unique_id=1253574849 instance=ExtResource("3_kevww")]
+transform = Transform3D(-0.9999426, 0, 0.01069854, 0, 1, 0, -0.01069854, 0, -0.9999426, -3.9970355, 0.0051481724, -101.59232)
+
+[node name="Sketchfab_Scene3" parent="Sketchfab_Scene" unique_id=960921577 instance=ExtResource("3_kevww")]
+transform = Transform3D(-0.99994284, 0, 0.010698549, 0, 1, 0, -0.010698549, 0, -0.99994284, -2.6388497, -0.0041019917, -97.1949)
+
+[node name="Sketchfab_Scene" parent="Sketchfab_Scene/Sketchfab_Scene3" unique_id=307312590 instance=ExtResource("3_kevww")]
+transform = Transform3D(0.99999946, 0, 1.7695129e-07, 0, 1, 0, -1.7695129e-07, 0, 0.99999946, 1.8384254, 0.032701254, -88.93718)
+
+[node name="Sketchfab_Scene" parent="Sketchfab_Scene/Sketchfab_Scene3/Sketchfab_Scene" unique_id=805204739 instance=ExtResource("3_kevww")]
+transform = Transform3D(0.99999946, 0, 1.7695129e-07, 0, 1, 0, -1.7695129e-07, 0, 0.99999946, 1.8384254, 0.032701254, -88.93718)
+
+[node name="Sketchfab_Scene2" parent="Sketchfab_Scene/Sketchfab_Scene3" unique_id=2076631831 instance=ExtResource("3_kevww")]
+transform = Transform3D(0.9999993, 0, 1.8067658e-07, 0, 1, 0, -1.8067658e-07, 0, 0.9999993, 1.8478699, 0.050537825, -91.381134)
+
+[node name="Sketchfab_Scene" parent="Sketchfab_Scene/Sketchfab_Scene3/Sketchfab_Scene2" unique_id=1368340231 instance=ExtResource("3_kevww")]
+transform = Transform3D(-0.9999426, 0, 0.01069854, 0, 1, 0, -0.01069854, 0, -0.9999426, -3.9970355, 0.0051481724, -101.59232)
+
+[node name="Sketchfab_Scene2" parent="Sketchfab_Scene/Sketchfab_Scene3/Sketchfab_Scene2" unique_id=325960561 instance=ExtResource("3_kevww")]
+transform = Transform3D(0.99999934, 0, 1.7881393e-07, 0, 1, 0, -1.7881393e-07, 0, 0.99999934, 1.8478699, 0.036037207, -91.381134)
+
+[node name="Sketchfab_Scene" parent="Sketchfab_Scene/Sketchfab_Scene3/Sketchfab_Scene2/Sketchfab_Scene2" unique_id=412647283 instance=ExtResource("3_kevww")]
+transform = Transform3D(-0.9999426, 0, 0.01069854, 0, 1, 0, -0.01069854, 0, -0.9999426, -3.9970355, 0.0051481724, -101.59232)
+
+[node name="Sketchfab_Scene4" parent="Sketchfab_Scene" unique_id=1335264383 instance=ExtResource("3_kevww")]
+transform = Transform3D(-0.99994284, 0, 0.010698549, 0, 1, 0, -0.010698549, 0, -0.99994284, -2.6388497, -0.0041019917, -97.1949)
+
+[node name="Sketchfab_Scene2" parent="Sketchfab_Scene/Sketchfab_Scene4" unique_id=1391636100 instance=ExtResource("3_kevww")]
+transform = Transform3D(-0.9999428, 0, 0.010698546, 0, 1, 0, -0.010698546, 0, -0.9999428, -4.4847016, -0.0041017532, -97.15978)
+
+[node name="Sketchfab_Scene" parent="Sketchfab_Scene/Sketchfab_Scene4/Sketchfab_Scene2" unique_id=1154753002 instance=ExtResource("3_kevww")]
+transform = Transform3D(-0.99907076, 0, 0.043096144, 0, 1, 0, -0.043096144, 0, -0.99907076, -3.997035, 0.0051481724, -101.592316)
+
+[node name="Sketchfab_Scene2" parent="." unique_id=1508890354 instance=ExtResource("4_gkg1b")]
+transform = Transform3D(-3.5632027e-05, 0, 0.00046352894, 0, 0.0003789486, 0, -0.000999365, 0, -1.652697e-05, -3.703709, -0.051995516, -91.73929)
+
+[node name="Sketchfab_Scene4" parent="." unique_id=223988188 instance=ExtResource("4_gkg1b")]
+transform = Transform3D(-3.5632027e-05, 0, 0.00046352894, 0, 0.0003789486, 0, -0.000999365, 0, -1.652697e-05, -3.431373, -0.18849921, -83.545006)
+
+[node name="Sketchfab_Scene5" parent="." unique_id=1083293074 instance=ExtResource("4_gkg1b")]
+transform = Transform3D(-3.5632027e-05, 0, 0.00046352894, 0, 0.0003789486, 0, -0.000999365, 0, -1.652697e-05, 4.7580667, -0.115532875, -83.545006)
+
+[node name="Sketchfab_Scene3" parent="." unique_id=1961347125 instance=ExtResource("5_53e27")]
+transform = Transform3D(-0.0009999999, 0, -2.4442124e-07, 0, 0.001, 0, 2.4442124e-07, 0, -0.0009999999, -1.8200402, 0.63855183, -88.6846)
+
+[node name="Sketchfab_Scene3" parent="Sketchfab_Scene3" unique_id=1689079804 instance=ExtResource("5_53e27")]
+transform = Transform3D(-0.0009999999, 0, -2.4442124e-07, 0, 0.001, 0, 2.4442124e-07, 0, -0.0009999999, -1.8200402, 0.63855183, -88.6846)
+
+[node name="Sketchfab_Scene" parent="Sketchfab_Scene3" unique_id=1177078542 instance=ExtResource("5_53e27")]
+transform = Transform3D(-0.8999997, 0, 0.00022007698, 0, 0.9, 0, -0.00022007698, 0, -0.8999997, -3749.7178, -333.52222, 11087.57)
+
+[node name="uploads_files_6160160_Brick_Storefront_Buil_0526090009_texture" parent="." unique_id=826560616 instance=ExtResource("11_h5w2f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6062565, 1.0496709, -99.40329)
+
+[node name="uploads_files_6160160_Brick_Storefront_Buil_0526090009_texture" parent="uploads_files_6160160_Brick_Storefront_Buil_0526090009_texture" unique_id=140053410 instance=ExtResource("11_h5w2f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6062565, 1.0496709, -99.40329)
+
+[node name="uploads_files_5386146_OldHouse" parent="." unique_id=839604831 instance=ExtResource("12_tdbbr")]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 2.631779, 0.419617, -94.18451)
+
+[node name="Sketchfab_Scene10" parent="." unique_id=1083561906 instance=ExtResource("3_kevww")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8725898, -2.3841858e-07, -101.706055)
+
+[node name="uploads_files_3359724_old+house" parent="." unique_id=367395772 instance=ExtResource("15_6cx4y")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 13.371783, 0.43018484, -82.3933)
+
+[node name="domek" parent="." unique_id=1569020056 instance=ExtResource("23_era0c")]
+transform = Transform3D(0.076412275, 0, 1.4980524, 0, 1.5, 0, -1.4980524, 0, 0.076412275, 8.824575, 1.432389, -76.27456)
+
+[node name="domek" parent="domek" unique_id=936964529 instance=ExtResource("23_era0c")]
+transform = Transform3D(-0.0997766, 0, 1.4966778, 0, 1.5, 0, -1.4966778, 0, -0.0997766, 1.214014, 0.43002588, -8.532587)
+
+[node name="Bike" parent="." unique_id=1675117535 instance=ExtResource("25_8honx")]
+transform = Transform3D(-0.99979115, 0, 0.020436445, 0, 1, 0, -0.020436445, 0, -0.99979115, 1.304896, 0.05156319, -94.77489)
+max_speed = 3.0
+
+[node name="Bike3" parent="." unique_id=662235877 instance=ExtResource("25_era0c")]
+transform = Transform3D(-0.74907887, 0, 0.03716031, 0, 0.75, 0, -0.03716031, 0, -0.74907887, 0.59378135, 0.049999952, -96.19979)
+fuel_consumption_rate = 0.03
+
+[node name="GasStation" parent="." unique_id=1379943973 instance=ExtResource("26_cqopq")]
+transform = Transform3D(0.055385828, 0, -0.998465, 0, 0.6024736, 0, 0.998465, 0, 0.055385828, 1.2934542, 0.0500001, -82.1513)
+
+[node name="Laptop" parent="." unique_id=1021407406 instance=ExtResource("29_yiisg")]
+transform = Transform3D(-0.0074959267, 0, -0.49994382, 0, 0.5, 0, 0.49994382, 0, -0.0074959267, 4.303301, 0.15929568, -98.18351)
+
+[node name="Drogawiejska2" type="MeshInstance3D" parent="." unique_id=56994191]
+transform = Transform3D(-0.0865088, 0, 1.0677812, 0, 0.1597322, 0, -8.429268, 0, -0.010958856, 68.75111, 0.008395195, -148.5496)
+mesh = ExtResource("15_ra7mw")
+
+[node name="Autobana" type="MeshInstance3D" parent="." unique_id=26086089]
+transform = Transform3D(16.17057, 0, 0, 0, 1, 0, 0, 0, 1, 54.830486, 0.05446005, -159.75748)
+mesh = ExtResource("16_u6rrg")
+
+[node name="Autobana2" type="MeshInstance3D" parent="." unique_id=1761328111]
+transform = Transform3D(-0.18410644, 0, 0.99997413, 0, 1, 0, -25.60279, 0, -0.007190686, -87.14507, 0.030798435, -136.71114)
+mesh = ExtResource("16_u6rrg")
+
+[node name="Drogawiejska" type="MeshInstance3D" parent="." unique_id=2009709865]
+transform = Transform3D(3.3658195, 0, 0, 0, 1, 0, 0, 0, 1, -4.4387307, 0.13754202, 57.90013)
+mesh = ExtResource("15_ra7mw")
+
+[node name="Drogawiejska" type="MeshInstance3D" parent="Drogawiejska" unique_id=89851519]
+transform = Transform3D(0.7729205, 0, 0, 0, 0.86049676, 0, 0, 0, 0.90017927, 0.20234466, -0.068924904, -30.620285)
+mesh = ExtResource("15_ra7mw")
+
+[node name="Sketchfab_Scene13" parent="." unique_id=1074169353 instance=ExtResource("37_ygs64")]
+transform = Transform3D(-0.0034382772, 0, 0.4999882, 0, 0.5, 0, -0.4999882, 0, -0.0034382772, -5.292774, 0.08254434, -51.863625)
+
+[node name="Sketchfab_Scene14" parent="." unique_id=463288323 instance=ExtResource("38_mfhj0")]
+transform = Transform3D(0.004999878, 0, 3.490658e-05, 0, 0.005, 0, -3.490658e-05, 0, 0.004999878, 74.37545, -1.0909019, -64.63226)
+
+[node name="GasStation2" parent="." unique_id=1016567974 instance=ExtResource("26_cqopq")]
+transform = Transform3D(-0.9999667, 0, -0.0081680715, 0, 0.6024736, 0, 0.0081680715, 0, -0.9999667, -31.987076, 0.0500001, -24.696146)
+
+[node name="uploads_files_3965925_WoodenGate001" parent="." unique_id=1219932446 instance=ExtResource("11_mfhj0")]
+transform = Transform3D(0.017417494, 0, 0.9998483, 0, 1, 0, -0.9998483, 0, 0.017417494, 61.07129, 0.9206014, -53.067036)
+
+[node name="uploads_files_3965925_WoodenGate001" parent="uploads_files_3965925_WoodenGate001" unique_id=2140222304 instance=ExtResource("11_mfhj0")]
+transform = Transform3D(0.9999726, 0, 0.0074001383, 0, 1, 0, -0.0074001383, 0, 0.9999726, -0.032776598, -0.036488116, -3.852001)
+
+[node name="uploads_files_3965925_WoodenGate001" parent="uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001" unique_id=591715658 instance=ExtResource("11_mfhj0")]
+transform = Transform3D(0.9999726, 0, 0.0074001383, 0, 1, 0, -0.0074001383, 0, 0.9999726, -0.032776598, -0.036488116, -3.852001)
+
+[node name="uploads_files_3965925_WoodenGate001" parent="uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001" unique_id=1001808404 instance=ExtResource("11_mfhj0")]
+transform = Transform3D(0.9999726, 0, 0.0074001383, 0, 1, 0, -0.0074001383, 0, 0.9999726, -0.03241739, -0.036488116, -3.8034618)
+
+[node name="uploads_files_3965925_WoodenGate001" parent="uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001" unique_id=1350194211 instance=ExtResource("11_mfhj0")]
+transform = Transform3D(0.9999726, 0, 0.0074001383, 0, 1, 0, -0.0074001383, 0, 0.9999726, -0.032776598, -0.036488116, -3.852001)
+
+[node name="uploads_files_3965925_WoodenGate001" parent="uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001" unique_id=1246739845 instance=ExtResource("11_mfhj0")]
+transform = Transform3D(0.9999726, 0, 0.0074001383, 0, 1, 0, -0.0074001383, 0, 0.9999726, -0.032776598, -0.036488116, -3.852001)
+
+[node name="uploads_files_3965925_WoodenGate001" parent="uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001" unique_id=2045270188 instance=ExtResource("11_mfhj0")]
+transform = Transform3D(0.9999726, 0, 0.0074001383, 0, 1, 0, -0.0074001383, 0, 0.9999726, -0.032776598, -0.036488116, -3.852001)
+
+[node name="uploads_files_3965925_WoodenGate001" parent="uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001" unique_id=1833513575 instance=ExtResource("11_mfhj0")]
+transform = Transform3D(0.9993568, 0, -0.035858817, 0, 1, 0, 0.035858817, 0, 0.9993568, -0.032776598, -0.036488116, -3.852001)
+
+[node name="uploads_files_3965925_WoodenGate001" parent="uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001" unique_id=830117856 instance=ExtResource("11_mfhj0")]
+transform = Transform3D(0.9983408, 0, -0.057581436, 0, 1, 0, 0.057581436, 0, 0.9983408, 0.23419109, -0.036488116, -3.8539765)
+
+[node name="uploads_files_3965925_WoodenGate001" parent="uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001" unique_id=1892781647 instance=ExtResource("11_mfhj0")]
+transform = Transform3D(0.03418437, 0, -0.9994155, 0, 1, 0, 0.9994155, 0, 0.03418437, 1.9737487, -0.036488116, -1.9900742)
+
+[node name="uploads_files_3965925_WoodenGate001" parent="uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001" unique_id=1426776692 instance=ExtResource("11_mfhj0")]
+transform = Transform3D(0.03418437, 0, -0.9994155, 0, 1, 0, 0.9994155, 0, 0.03418437, 1.9737487, -0.036488116, -1.9900742)
+
+[node name="uploads_files_3965925_WoodenGate001" parent="uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001" unique_id=1914548683 instance=ExtResource("11_mfhj0")]
+transform = Transform3D(0.9978987, 0, -0.06479352, 0, 1, 0, 0.06479352, 0, 0.9978987, -53.397003, 0.21564287, -29.44626)
+
+[node name="uploads_files_3965925_WoodenGate001" parent="uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001" unique_id=1756632949 instance=ExtResource("11_mfhj0")]
+transform = Transform3D(0.9998602, 0, 0.016719513, 0, 1, 0, -0.016719513, 0, 0.9998602, 0.016623536, 0.020193994, 3.8366332)
+
+[node name="uploads_files_3965925_WoodenGate001" parent="uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001" unique_id=200092657 instance=ExtResource("11_mfhj0")]
+transform = Transform3D(0.9998602, 0, 0.016719513, 0, 1, 0, -0.016719513, 0, 0.9998602, 0.016623536, 0.020193994, 3.8366332)
+
+[node name="uploads_files_3965925_WoodenGate001" parent="uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001/uploads_files_3965925_WoodenGate001" unique_id=987891754 instance=ExtResource("11_mfhj0")]
+transform = Transform3D(0.07757776, 0, 1.2040932, 0, 1.67, 0, 1.9984949, 0, -0.046740603, -11.001895, 0.44804373, -13.17319)
+
+[node name="uploads_files_4567867_blok1" parent="." unique_id=536372738 instance=ExtResource("40_7a3u0")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 77.445526, -1.0943103, -78.48616)
+
+[node name="uploads_files_5038242_3D+centrum+11" parent="." unique_id=419213066 instance=ExtResource("41_66y2s")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 61.117725, -0.62366056, -129.1363)
+
+[node name="uploads_files_5038242_3D+centrum+11" parent="uploads_files_5038242_3D+centrum+11" unique_id=1283445243 instance=ExtResource("41_66y2s")]
+transform = Transform3D(-0.9999175, 0, 0.012845296, 0, 1, 0, -0.012845296, 0, -0.9999175, -437.59467, -0.62366056, 392.28278)
+
+[node name="uploads_files_5038242_3D+centrum+12" parent="uploads_files_5038242_3D+centrum+11" unique_id=161319062 instance=ExtResource("41_66y2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.584347, -1.0640721, -91.72069)
+
+[node name="uploads_files_5038242_3D+centrum+11" parent="uploads_files_5038242_3D+centrum+11/uploads_files_5038242_3D+centrum+12" unique_id=1097651861 instance=ExtResource("41_66y2s")]
+transform = Transform3D(-0.9999175, 0, 0.012845296, 0, 1, 0, -0.012845296, 0, -0.9999175, -361.1573, -0.62366056, 393.2647)
+
+[node name="uploads_files_5432559_House_01" parent="." unique_id=448587103 instance=ExtResource("12_0nvap")]
+transform = Transform3D(0.49999964, 0, -0.0006108638, 0, 0.5, 0, 0.0006108638, 0, 0.49999964, 55.68271, -0.5088784, -82.41743)
+
+[node name="uploads_files_5432559_House_01" parent="uploads_files_5432559_House_01" unique_id=258641803 instance=ExtResource("12_0nvap")]
+transform = Transform3D(0.9993487, 0, -0.036085572, 0, 1, 0, 0.036085572, 0, 0.9993487, 7.7257204, 0.03622085, 0.2962523)
+
+[node name="uploads_files_5432559_House_01" parent="uploads_files_5432559_House_01/uploads_files_5432559_House_01" unique_id=268107845 instance=ExtResource("12_0nvap")]
+transform = Transform3D(0.99988174, 0, 0.015375745, 0, 1, 0, -0.015375745, 0, 0.99988174, 7.719248, 0.03622085, -0.124672234)
+
+[node name="Sketchfab_Scene15" parent="." unique_id=2005423371 instance=ExtResource("45_qhj12")]
+transform = Transform3D(1.4740356, 0, -0.036155343, 0, 2.62, 0, 0.05332913, 0, 0.9993462, 42.413605, 0.053208236, -99.298935)
+
+[node name="Sketchfab_Scene15" parent="Sketchfab_Scene15" unique_id=1660104058 instance=ExtResource("45_qhj12")]
+transform = Transform3D(1.1347029, 0, 0.022879265, 0, 1.63, 0, -0.025967967, 0, 0.9997382, -16.315346, 0.008857638, 0.43871304)
+
+[node name="Sketchfab_Scene15" parent="Sketchfab_Scene15/Sketchfab_Scene15" unique_id=492979404 instance=ExtResource("45_qhj12")]
+transform = Transform3D(1.1347029, 0, 0.012240405, 0, 0.77, 0, -0.025967961, 0, 0.53485996, 1.9671675, -0.01573569, 9.450804)
+
+[node name="Sketchfab_Scene16" parent="Sketchfab_Scene15/Sketchfab_Scene15" unique_id=1969912147 instance=ExtResource("45_qhj12")]
+transform = Transform3D(1.1347029, 0, 0.022879263, 0, 0.74, 0, -0.025967963, 0, 0.9997382, -1.7577754, -0.0005397722, -22.981644)
+
+[node name="Sketchfab_Scene15" parent="Sketchfab_Scene15/Sketchfab_Scene15/Sketchfab_Scene16" unique_id=2040650855 instance=ExtResource("45_qhj12")]
+transform = Transform3D(1.1347029, 0, 0.012240405, 0, 0.77, 0, -0.025967961, 0, 0.53485996, 1.9284256, -0.01573569, 12.276863)
+
+[node name="Sketchfab_Scene16" parent="Sketchfab_Scene15/Sketchfab_Scene15/Sketchfab_Scene16" unique_id=706920510 instance=ExtResource("45_qhj12")]
+transform = Transform3D(-0.03107724, 0, -0.9996251, 0, 0.74, 0, 1.1345744, 0, -0.027380828, 3.2205596, -0.0005397722, -0.74943614)
+
+[node name="Sketchfab_Scene15" parent="Sketchfab_Scene15/Sketchfab_Scene15/Sketchfab_Scene16/Sketchfab_Scene16" unique_id=630489558 instance=ExtResource("45_qhj12")]
+transform = Transform3D(1.1347029, 0, 0.012240405, 0, 0.77, 0, -0.025967961, 0, 0.53485996, 1.8638046, -0.01573569, 9.453169)
+
+[node name="Sketchfab_Scene15" parent="Sketchfab_Scene15/Sketchfab_Scene15/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene15" unique_id=1509560724 instance=ExtResource("45_qhj12")]
+transform = Transform3D(1.1696937, 0, 0.057632856, 0, 1.036, 0, -0.026768733, 0, 2.5183406, -3.494505, -0.01573569, 13.782946)
+
+[node name="Sketchfab_Scene17" parent="Sketchfab_Scene15/Sketchfab_Scene15/Sketchfab_Scene16" unique_id=76055739 instance=ExtResource("45_qhj12")]
+transform = Transform3D(1.1342018, 0, -0.027373789, 0, 0.74, 0, 0.042560615, 0, 0.7294866, 0.4631573, -0.0005397722, -28.151567)
+
+[node name="Sketchfab_Scene15" parent="Sketchfab_Scene15/Sketchfab_Scene15/Sketchfab_Scene16/Sketchfab_Scene17" unique_id=1150196549 instance=ExtResource("45_qhj12")]
+transform = Transform3D(1.1347029, 0, 0.012240405, 0, 0.77, 0, -0.025967961, 0, 0.53485996, 2.1189911, -0.01573569, 20.603867)
+
+[node name="Sketchfab_Scene16" parent="Sketchfab_Scene15/Sketchfab_Scene15/Sketchfab_Scene16/Sketchfab_Scene17" unique_id=30004365 instance=ExtResource("45_qhj12")]
+transform = Transform3D(-0.03107724, 0, -0.9996251, 0, 0.74, 0, 1.1345744, 0, -0.027380828, 2.9417794, -0.0005397722, 9.428331)
+
+[node name="Sketchfab_Scene15" parent="Sketchfab_Scene15/Sketchfab_Scene15/Sketchfab_Scene16/Sketchfab_Scene17/Sketchfab_Scene16" unique_id=786253507 instance=ExtResource("45_qhj12")]
+transform = Transform3D(1.1347029, 0, 0.012240405, 0, 0.77, 0, -0.025967961, 0, 0.53485996, 1.8638046, -0.01573569, 9.453169)
+
+[node name="Sketchfab_Scene15" parent="Sketchfab_Scene15/Sketchfab_Scene15/Sketchfab_Scene16/Sketchfab_Scene17/Sketchfab_Scene16/Sketchfab_Scene15" unique_id=1951170642 instance=ExtResource("45_qhj12")]
+transform = Transform3D(1.1746924, 0, 0.039809912, 0, 1.32, 0, -0.026883129, 0, 1.7395445, -4.270212, -0.01573569, 15.049936)
+
+[node name="Sketchfab_Scene15" parent="Sketchfab_Scene15/Sketchfab_Scene15/Sketchfab_Scene16/Sketchfab_Scene17/Sketchfab_Scene16/Sketchfab_Scene15/Sketchfab_Scene15" unique_id=1295850470 instance=ExtResource("45_qhj12")]
+transform = Transform3D(-0.02206029, 0, 2.5623643, 0, 1.32, 0, -0.94449204, 0, -0.059848584, 42.464943, -0.01573569, -0.27527547)
+
+[node name="Sketchfab_Scene16" parent="." unique_id=1755458778 instance=ExtResource("47_5r4d6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.392303, 0.0015452504, -67.281)
+
+[node name="Sketchfab_Scene16" parent="Sketchfab_Scene16" unique_id=165667796 instance=ExtResource("47_5r4d6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5549965, 0.0015452504, 0.08994293)
+
+[node name="Sketchfab_Scene16" parent="Sketchfab_Scene16/Sketchfab_Scene16" unique_id=1577358393 instance=ExtResource("47_5r4d6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.449715, 0.0015452504, 3.324543)
+
+[node name="Sketchfab_Scene16" parent="Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16" unique_id=1998403618 instance=ExtResource("47_5r4d6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02085495, 0.0015452504, 1.6779747)
+
+[node name="Sketchfab_Scene16" parent="Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16" unique_id=1837983364 instance=ExtResource("47_5r4d6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.274769, 0.0015452504, -0.7980728)
+
+[node name="Sketchfab_Scene16" parent="Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16" unique_id=511726509 instance=ExtResource("47_5r4d6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.299309, 0.0015452504, -0.14732361)
+
+[node name="Sketchfab_Scene16" parent="Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16" unique_id=399300859 instance=ExtResource("47_5r4d6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0269394, 0.0015452504, 0.0025939941)
+
+[node name="Sketchfab_Scene16" parent="Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16" unique_id=596966918 instance=ExtResource("47_5r4d6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1963463, 0.0015452504, -1.2082138)
+
+[node name="Sketchfab_Scene16" parent="Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16" unique_id=747127449 instance=ExtResource("47_5r4d6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.032180786, 0.0015452504, 2.4996529)
+
+[node name="Sketchfab_Scene16" parent="Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16" unique_id=1233442662 instance=ExtResource("47_5r4d6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.032180786, 0.0015452504, 4.5692673)
+
+[node name="Sketchfab_Scene16" parent="Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16" unique_id=1199748888 instance=ExtResource("47_5r4d6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.032180786, 0.0015452504, 2.143814)
+
+[node name="Sketchfab_Scene17" parent="Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16" unique_id=1897118544 instance=ExtResource("47_5r4d6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2219467, 0.0015452504, -1.7763596)
+
+[node name="Sketchfab_Scene16" parent="Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene17" unique_id=708639366 instance=ExtResource("47_5r4d6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.032180786, 0.0015452504, 1.9735374)
+
+[node name="Sketchfab_Scene17" parent="Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene17" unique_id=2012410919 instance=ExtResource("47_5r4d6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2637978, -0.07990605, 2.6369553)
+
+[node name="Sketchfab_Scene16" parent="Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene17/Sketchfab_Scene17" unique_id=1633822039 instance=ExtResource("47_5r4d6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.032180786, 0.0015452504, 2.143814)
+
+[node name="Sketchfab_Scene17" parent="Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene17/Sketchfab_Scene17" unique_id=972276650 instance=ExtResource("47_5r4d6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.398056, 0.08232182, -2.8803978)
+
+[node name="Sketchfab_Scene16" parent="Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene16/Sketchfab_Scene17/Sketchfab_Scene17/Sketchfab_Scene17" unique_id=1213776330 instance=ExtResource("47_5r4d6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.032180786, -0.06753105, 2.143814)
+
+[node name="uploads_files_5432559_House_02" parent="." unique_id=267175192 instance=ExtResource("12_0nvap")]
+transform = Transform3D(-0.004188735, 0, 0.49998248, 0, 0.5, 0, -0.49998248, 0, -0.004188735, -4.3371863, -0.45281863, -64.12926)
+
+[node name="uploads_files_5432559_House_01" parent="uploads_files_5432559_House_02" unique_id=1388600557 instance=ExtResource("12_0nvap")]
+transform = Transform3D(0.99998665, 0, 0.0051836073, 0, 1, 0, -0.0051836073, 0, 0.99998665, 8.509828, -0.111317396, 0.19724065)
+
+[node name="uploads_files_5432559_House_01" parent="uploads_files_5432559_House_02/uploads_files_5432559_House_01" unique_id=1980571707 instance=ExtResource("12_0nvap")]
+transform = Transform3D(0.99998665, 0, 0.0051836073, 0, 1, 0, -0.0051836073, 0, 0.99998665, 8.069995, -0.111317396, 0.1995206)
+
+[node name="Sketchfab_Scene9" parent="." unique_id=569274156 instance=ExtResource("38_mfhj0")]
+transform = Transform3D(-5.172916e-05, 0, -0.0029995544, 0, 0.004, 0, 0.0029995544, 0, -5.172916e-05, -2.4220252, -0.9708516, -86.21906)
+
+[node name="Autobana3" type="MeshInstance3D" parent="." unique_id=896416794]
+transform = Transform3D(2.9405928, 0, 0, 0, 1.0148193, 0, 0, 0, 1, 64.740974, 0.03934002, -138.01695)
+mesh = ExtResource("16_u6rrg")
+
+[node name="Autobana4" type="MeshInstance3D" parent="." unique_id=1700570085]
+transform = Transform3D(0.2441365, 0, 0.99956244, 0, 1, 0, -8.250099, 0, 0.029578999, 25.207985, 0.07721316, -69.35268)
+mesh = ExtResource("16_u6rrg")
+
+[node name="LiftBillboard" type="Label3D" parent="." unique_id=1232527844]
+transform = Transform3D(0.6296133, 0, 0, 0, 0.5393118, 0, 0, 0, 0.34214246, 3.373336, 0.3449943, -97.02784)
+billboard = 1
+no_depth_test = true
+modulate = Color(0.2, 1, 0.4, 1)
+text = "[E] MODYFIKUJ POJAZD"
+font_size = 72
+outline_size = 14
+
+[node name="Aerox" type="MeshInstance3D" parent="." unique_id=478666113]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29882216, 0.87763673, -98.243614)
+mesh = ExtResource("38_7a3u0")
+
+[node name="ScooterShop" parent="." unique_id=1360011062 instance=ExtResource("40_66y2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9956357, 0.049999833, -76.35767)
+
+[node name="AprilliaSR50" parent="." unique_id=344542785 instance=ExtResource("39_66y2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2649325, 0.14461908, -92.64966)
+
+[node name="NewAerox" parent="." unique_id=1916620986 instance=ExtResource("41_0ncls")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.61918485, 0.13746312, -94.24817)
+
+[node name="GasPriceSign" parent="." unique_id=930049749 instance=ExtResource("42_0ncls")]
+transform = Transform3D(0.35798708, 0, -0.48150313, 0, 0.6, 0, 0.48150313, 0, 0.35798708, 2.0387123, 0.66482204, -81.51183)
+
+[node name="PoliceCar" parent="." unique_id=907899007 instance=ExtResource("43_bf6l0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.517399, -0.14053512, -72.12864)
+
+[connection signal="pressed" from="Basic FPS Player/PauseUI/PauseBackground/PauseButtons/WrocButton" to="Basic FPS Player" method="_on_wroc_button_pressed"]
+[connection signal="pressed" from="Basic FPS Player/PauseUI/PauseBackground/PauseButtons/WrocButton" to="Basic FPS Player/PauseUI/ClickSoundPlayer" method="play"]
+[connection signal="pressed" from="Basic FPS Player/PauseUI/PauseBackground/PauseButtons/UstawieniaButton" to="Basic FPS Player" method="_on_ustawienia_button_pressed"]
+[connection signal="pressed" from="Basic FPS Player/PauseUI/PauseBackground/PauseButtons/UstawieniaButton" to="Basic FPS Player/PauseUI/ClickSoundPlayer" method="play"]
+[connection signal="pressed" from="Basic FPS Player/PauseUI/PauseBackground/PauseButtons/WyjscieButton" to="Basic FPS Player" method="_on_wyjscie_button_pressed"]
+[connection signal="pressed" from="Basic FPS Player/PauseUI/PauseBackground/PauseButtons/WyjscieButton" to="Basic FPS Player/PauseUI/ClickSoundPlayer" method="play"]
+[connection signal="value_changed" from="Basic FPS Player/PauseUI/PauseBackground/OptionsPanel/OptionsLayout/MusicSlider" to="Basic FPS Player" method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="Basic FPS Player/PauseUI/PauseBackground/OptionsPanel/OptionsLayout/SFXSlider" to="Basic FPS Player" method="_on_sfx_slider_value_changed"]
+[connection signal="item_selected" from="Basic FPS Player/PauseUI/PauseBackground/OptionsPanel/OptionsLayout/GraphicOptions" to="Basic FPS Player" method="_on_graphic_options_item_selected"]
+[connection signal="pressed" from="Basic FPS Player/PauseUI/PauseBackground/OptionsPanel/OptionsLayout/WsteczButton" to="Basic FPS Player" method="_on_options_wstecz_pressed"]

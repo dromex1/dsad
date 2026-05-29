@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://c55ond3hi106f"]
+
+[ext_resource type="Script" uid="uid://brqahedvmssqw" path="res://gas_station.gd" id="1_gq6gv"]
+[ext_resource type="PackedScene" uid="uid://chh1j57ljhlk5" path="res://vintage_gas_pump.glb" id="2_phd7g"]
+[ext_resource type="FontFile" uid="uid://bgyfur5g6v026" path="res://Czcionki/toxigenesis bd.otf" id="3_7e77n"]
+[ext_resource type="AudioStream" uid="uid://w405hs0np2g2" path="res://zatankowane (mp3cut.net).wav" id="4_phd7g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bfkeo"]
+size = Vector3(3.505, 3.285, 4.59)
+
+[node name="GasStation" type="Area3D"]
+script = ExtResource("1_gq6gv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.12874669)
+shape = SubResource("BoxShape3D_bfkeo")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("2_phd7g")]
+
+[node name="RefuelPrompt" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1416534, 0.26222003)
+text = "Zatankuj pojazd [G]"
+font = ExtResource("3_7e77n")
+font_size = 15
+
+[node name="RefuelCompleteSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_phd7g")
+pitch_scale = 0.68

@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://c2ldhmxj6qdp7"]
+
+[ext_resource type="PackedScene" uid="uid://db233vjy4m857" path="res://male_casual_idle.glb" id="2_meuy7"]
+[ext_resource type="Script" uid="uid://cncan8mx3toix" path="res://male_casual_idle.gd" id="3_y6uf6"]
+[ext_resource type="PackedScene" uid="uid://dppig4vjud4o8" path="res://Modele/tacos_map/Tacos.glb" id="25_tr3xd"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xpt0u"]
+sky_top_color = Color(0.76638913, 0.8040117, 0.9778301, 1)
+sky_horizon_color = Color(0.32026157, 0.33755988, 0.33017567, 1)
+ground_bottom_color = Color(0.5850276, 0.5986706, 0.82713306, 1)
+ground_horizon_color = Color(0.667675, 0.7375184, 0.81840837, 1)
+
+[sub_resource type="Sky" id="Sky_uls0g"]
+sky_material = SubResource("ProceduralSkyMaterial_xpt0u")
+
+[sub_resource type="Environment" id="Environment_q3h2q"]
+background_mode = 2
+background_energy_multiplier = 0.36
+sky = SubResource("Sky_uls0g")
+fog_enabled = true
+fog_light_energy = 2.2
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0177
+volumetric_fog_emission_energy = 0.0
+volumetric_fog_gi_inject = 0.36
+volumetric_fog_detail_spread = 2.0705297
+volumetric_fog_ambient_inject = 0.42
+
+[node name="SwiatGry" type="Node3D" unique_id=619723173]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1054187935]
+transform = Transform3D(1, 0, 0, 0, 0.8471219, 0.5313986, 0, -0.5313986, 0.8471219, 5.3878155, 35.699986, 0)
+light_energy = 2.484
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1570376862]
+environment = SubResource("Environment_q3h2q")
+
+[node name="Tacos2" parent="." unique_id=999524060 instance=ExtResource("25_tr3xd")]
+transform = Transform3D(0.011238951, 0, -0.4998737, 0, 0.5, 0, 0.4998737, 0, 0.011238951, -54.8345, 0.10092676, -70.50826)
+
+[node name="male_casual_idle" parent="." unique_id=148592516 instance=ExtResource("2_meuy7")]
+transform = Transform3D(0.009980605, 0, 0.011197656, 0, 0.015, 0, -0.011197656, 0, 0.009980605, -57.07987, 0.82007253, -70.7578)
+script = ExtResource("3_y6uf6")

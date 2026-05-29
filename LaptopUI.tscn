@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsmp8e3puel4f"]
+
+[ext_resource type="Script" uid="uid://l6qamvjhmejy" path="res://LaptopUI.gd" id="1_nanui"]
+[ext_resource type="AudioStream" uid="uid://bw34n8fuw7kvw" path="res://upgradeunlock.wav" id="3_8ky2l"]
+[ext_resource type="AudioStream" uid="uid://btp6bxo13qlsq" path="res://buttonclick.wav" id="4_qskdj"]
+
+[node name="LaptopUI" type="CanvasLayer"]
+process_mode = 2
+script = ExtResource("1_nanui")
+
+[node name="UpgradeSoundPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("3_8ky2l")
+
+[node name="NavClickPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("4_qskdj")

@@ -1,0 +1,172 @@
+[gd_scene format=3 uid="uid://cg6ttu8llidqy"]
+
+[ext_resource type="Script" uid="uid://ctr8mtst48wa7" path="res://VehicleBase.gd" id="1_abc12"]
+[ext_resource type="FontFile" uid="uid://bgyfur5g6v026" path="res://Czcionki/toxigenesis bd.otf" id="2_font"]
+[ext_resource type="AudioStream" uid="uid://c1grh0vhccpni" path="res://ss/bike-bell-173588 (mp3cut.net).mp3" id="4_bell"]
+[ext_resource type="AudioStream" uid="uid://bkuu2js42d2u5" path="res://vespaidlesound.mp3" id="5_d6a0o"]
+[ext_resource type="AudioStream" uid="uid://ckbj6gaphnak" path="res://vespaprzyspieszenie.mp3" id="6_7c64d"]
+[ext_resource type="PackedScene" uid="uid://dav5x0wyvbdx7" path="res://dym z rury.tscn" id="6_smoke"]
+[ext_resource type="Texture2D" uid="uid://ghvlq5x717ir" path="res://speedometr.png" id="7_speedometer"]
+[ext_resource type="PackedScene" uid="uid://ca5g558wegcq" path="res://Modele/aeroxnew.glb" id="8_7c64d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1"]
+size = Vector3(459.78, 234.225, 104.7)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_1"]
+height = 1.0
+radius = 0.35
+
+[node name="NewAerox" type="CharacterBody3D" unique_id=1916620986]
+script = ExtResource("1_abc12")
+vehicle_name = "newaerox"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=248249218]
+transform = Transform3D(-3.3683114e-05, 0, 0.0019997163, 0, 0.0019999999, 0, -0.0019997163, 0, -3.3683114e-05, 0.00057995756, 0.265333, -0.0005898086)
+shape = SubResource("BoxShape3D_1")
+
+[node name="aeroxnew" parent="." unique_id=1380841508 instance=ExtResource("8_7c64d")]
+transform = Transform3D(-0.15, 0, -1.3113417e-08, 0, 0.15, 0, 1.3113417e-08, 0, -0.15, 0.031688932, 0.37003055, 0.017283628)
+
+[node name="InteractZone" type="Area3D" parent="." unique_id=785744472]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractZone" unique_id=1839132013]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.33611664, 0)
+shape = SubResource("CylinderShape3D_1")
+
+[node name="PromptLabel" type="Label3D" parent="." unique_id=27062431]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5764605, 0)
+visible = false
+billboard = 2
+text = "KLIKNIJ [E]"
+font = ExtResource("2_font")
+font_size = 27
+
+[node name="BellSoundPlayer" type="AudioStreamPlayer3D" parent="." unique_id=1739631386]
+stream = ExtResource("4_bell")
+volume_db = -10.608
+
+[node name="IdleSoundPlayer" type="AudioStreamPlayer3D" parent="." unique_id=1411402972]
+stream = ExtResource("5_d6a0o")
+volume_db = -80.0
+max_db = -7.608
+parameters/looping = true
+
+[node name="AccelSoundPlayer" type="AudioStreamPlayer3D" parent="." unique_id=1706455573]
+stream = ExtResource("6_7c64d")
+volume_db = -80.0
+max_db = -9.1
+parameters/looping = true
+
+[node name="BellTimer" type="Timer" parent="." unique_id=1675362527]
+wait_time = 3.392
+one_shot = true
+
+[node name="ExhaustSmoke" parent="." unique_id=1558479052 instance=ExtResource("6_smoke")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25163853, 0.39952266)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1211544661]
+
+[node name="Speedometr" type="Sprite2D" parent="CanvasLayer" unique_id=162846727]
+visible = false
+position = Vector2(108, 591)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("7_speedometer")
+
+[node name="BindLabel" type="Label" parent="CanvasLayer" unique_id=1131198100]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -179.0
+offset_top = 11.0
+offset_right = -8.0
+offset_bottom = 248.0
+grow_horizontal = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_constants/shadow_outline_size = 55
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 13
+text = "DO PRZODU:  [W]
+
+DO TYŁU:  [S]
+
+SKRĘT W LEWO:  [A]
+
+SKRĘT W PRAWO:  [D]
+
+KLAKSON:  [Q]
+
+ZSIADANIE:  [E]
+"
+
+[node name="SpeedLabel" type="Label" parent="CanvasLayer" unique_id=531396957]
+visible = false
+anchors_preset = -1
+anchor_left = 0.091000006
+anchor_top = 0.5
+anchor_right = 0.091000006
+anchor_bottom = 0.5
+offset_left = -119.72002
+offset_top = 32.0
+offset_right = 44.279984
+offset_bottom = 78.0
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 28
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 25
+text = "0 km/h"
+
+[node name="FuelProgressBar" type="ProgressBar" parent="CanvasLayer" unique_id=1300521371]
+visible = false
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = 169.0
+offset_right = 201.0
+offset_bottom = 199.0
+grow_vertical = 2
+tooltip_text = "BENZYNA
+"
+show_percentage = false
+
+[node name="FuelPercentLabel" type="Label" parent="CanvasLayer" unique_id=1719975695]
+visible = false
+offset_left = 220.0
+offset_top = 712.0
+offset_right = 270.0
+offset_bottom = 735.0
+theme_override_fonts/font = ExtResource("2_font")
+text = "100%"
+
+[node name="Benzyna" type="Label" parent="CanvasLayer" unique_id=151204846]
+visible = false
+offset_left = 51.0
+offset_top = 714.0
+offset_right = 151.0
+offset_bottom = 734.0
+theme_override_fonts/font = ExtResource("2_font")
+text = "BENZYNA"
+
+[node name="TempLabel" type="Label" parent="CanvasLayer" unique_id=783561387]
+visible = false
+offset_left = 71.0
+offset_top = 648.0
+offset_right = 200.0
+offset_bottom = 704.0
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 25
+text = "32 °C
+"
+
+[node name="TempWarningLabel" type="Label" parent="CanvasLayer" unique_id=1864219191]
+visible = false
+offset_left = 1.0
+offset_top = 738.0
+offset_right = 105.0
+offset_bottom = 761.0
+theme_override_colors/font_color = Color(0.78, 0, 0, 0.8980392)
+text = "OSTRZEŻENIE:"

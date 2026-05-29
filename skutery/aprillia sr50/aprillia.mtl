@@ -1,0 +1,484 @@
+newmtl Speedm1Mtl
+Material Color
+Ka 0.00258583 0.00258583 0.00258583
+Kd 0.00258583 0.00258583 0.00258583
+Ks 0.00102419 0.00102419 0.00102419 
+
+d 1
+
+Ns 0
+
+map_Ka Speedm1_diff.png
+map_Kd Speedm1_diff.png
+map_d Speedm1_diff.png
+
+map_Bump Speedm1_nmap.png
+
+newmtl Trn7Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.147981 0.145991 0.152005 
+
+d 1
+
+Ns 0
+
+map_Ka Speedm1_diff.png
+map_Kd Speedm1_diff.png
+map_d Speedm1_diff.png
+
+map_Bump Speedm1_nmap.png
+
+newmtl Speed1Mtl
+Material Color
+Ka 1 0 0
+Kd 1 0 0
+Ks 0.396078 0 0 
+
+d 1
+
+Ns 0
+
+map_Ka Speedm1_diff.png
+map_Kd Speedm1_diff.png
+map_d Speedm1_diff.png
+
+map_Bump Speedm1_nmap.png
+
+newmtl Horn1Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.396078 0.396078 0.396078 
+
+d 0.980392
+
+Ns 0
+
+map_Ka Horn1_diff.png
+map_Kd Horn1_diff.png
+map_d Horn1_diff.png
+
+rbx_doublesided 1
+
+newmtl Seat1Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.105882 0.105882 0.105882 
+
+d 1
+
+Ns 0
+
+map_Ka Seat1_diff.png
+map_Kd Seat1_diff.png
+map_d Seat1_diff.png
+
+newmtl Seat2Mtl
+Material Color
+Ka 0.867136 0.487765 0.0356144
+Kd 0.867136 0.487765 0.0356144
+Ks 0.0306048 0.0172152 0.00125698 
+
+d 1
+
+Ns 0
+
+map_Ka Seat2_diff.png
+map_Kd Seat2_diff.png
+map_d Seat2_diff.png
+
+map_Bump Seat2_nmap.png
+
+map_Ns Seat2_spec.png
+
+newmtl Oilremovebgpreview1Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.396078 0.396078 0.396078 
+
+d 0.980392
+
+Ns 0
+
+map_Ka Oilremovebgpreview1_diff.png
+map_Kd Oilremovebgpreview1_diff.png
+map_d Oilremovebgpreview1_diff.png
+
+rbx_doublesided 1
+
+newmtl Ri1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0322335 0.0318 0.03311 
+
+d 0.980392
+
+Ns 255
+
+map_Ka Ri1_diff.png
+map_Kd Ri1_diff.png
+map_d Ri1_diff.png
+
+map_Ns Ri1_spec.png
+
+rbx_doublesided 1
+
+rbx_alphamode transparent
+
+newmtl Hb1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0322335 0.0318 0.03311 
+
+d 0.980392
+
+Ns 255
+
+map_Ka Hb1_diff.png
+map_Kd Hb1_diff.png
+map_d Hb1_diff.png
+
+map_Ns Hb1_spec.png
+
+rbx_doublesided 1
+
+rbx_alphamode transparent
+
+newmtl Paintturn1Mtl
+Material Color
+Ka 0.103634 0.108711 0.14198
+Kd 0.103634 0.108711 0.14198
+Ks 0.00894098 0.009379 0.0122493 
+
+d 1
+
+Ns 255
+
+map_Ns Paintturn1_spec.png
+
+rbx_alphamode overlay
+
+newmtl Cube1Mtl
+Material Color
+Ka 0.940601 0.940601 0.940601
+Kd 0.940601 0.940601 0.940601
+Ks 0.372552 0.372552 0.372552 
+
+d 1
+
+Ns 0
+
+map_Ka Speedm1_diff.png
+map_Kd Speedm1_diff.png
+map_d Speedm1_diff.png
+
+map_Bump Speedm1_nmap.png
+
+newmtl Plane0241Mtl
+Material Color
+Ka 0.00715504 0.018913 0.0315514
+Kd 0.00715504 0.018913 0.0315514
+Ks 0.000477002 0.00126087 0.00210343 
+
+d 1
+
+Ns 47
+
+map_Ka Plane0241_diff.png
+map_Kd Plane0241_diff.png
+map_d Plane0241_diff.png
+
+map_Bump Plane0241_nmap.png
+
+map_Ns Plane0241_spec.png
+
+newmtl Gauge21Mtl
+Material Color
+Ka 0.00258583 0.00258583 0.00258583
+Kd 0.00258583 0.00258583 0.00258583
+Ks 0.000223091 0.000223091 0.000223091 
+
+d 1
+
+Ns 255
+
+map_Ka Gauge21_diff.png
+map_Kd Gauge21_diff.png
+map_d Gauge21_diff.png
+
+map_Ns Gauge21_spec.png
+
+rbx_alphamode overlay
+
+newmtl Sm2Mtl
+Material Color
+Ka 0.598942 0.605484 0.645555
+Kd 0.598942 0.605484 0.645555
+Ks 0.237228 0.239819 0.255691 
+
+d 1
+
+Ns 0
+
+map_Ka Speedm1_diff.png
+map_Kd Speedm1_diff.png
+map_d Speedm1_diff.png
+
+map_Bump Speedm1_nmap.png
+
+newmtl Gauge1Mtl
+Material Color
+Ka 0.00258583 0.00258583 0.00258583
+Kd 0.00258583 0.00258583 0.00258583
+Ks 0.000223091 0.000223091 0.000223091 
+
+d 1
+
+Ns 255
+
+map_Ka Gauge1_diff.png
+map_Kd Gauge1_diff.png
+map_d Gauge1_diff.png
+
+map_Ns Gauge1_spec.png
+
+rbx_alphamode overlay
+
+newmtl Trn1Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.396078 0.396078 0.396078 
+
+d 1
+
+Ns 0
+
+map_Ka Seat1_diff.png
+map_Kd Seat1_diff.png
+map_d Seat1_diff.png
+
+newmtl 1Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.396078 0.396078 0.396078 
+
+d 1
+
+Ns 0
+
+map_Ka 1_diff.png
+map_Kd 1_diff.png
+map_d 1_diff.png
+
+rbx_doublesided 1
+
+newmtl Trn3Mtl
+Material Color
+Ka 0.00715504 0.018913 0.0315514
+Kd 0.00715504 0.018913 0.0315514
+Ks 0.00283396 0.00749103 0.0124968 
+
+d 1
+
+Ns 0
+
+map_Ka Speedm1_diff.png
+map_Kd Speedm1_diff.png
+map_d Speedm1_diff.png
+
+map_Bump Speedm1_nmap.png
+
+newmtl Trn10Mtl
+Material Color
+Ka 0.353741 0.363604 0.420508
+Kd 0.353741 0.363604 0.420508
+Ks 0.140109 0.144016 0.166554 
+
+d 1
+
+Ns 0
+
+map_Ka Speedm1_diff.png
+map_Kd Speedm1_diff.png
+map_d Speedm1_diff.png
+
+map_Bump Speedm1_nmap.png
+
+newmtl Trn12Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0627451 0.0627451 0.0627451 
+
+d 1
+
+Ns 0
+
+map_Ka Seat1_diff.png
+map_Kd Seat1_diff.png
+map_d Seat1_diff.png
+
+newmtl Ln1Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.396078 0.396078 0.396078 
+
+d 1
+
+Ns 0
+
+map_Ka Ln1_diff.png
+map_Kd Ln1_diff.png
+map_d Ln1_diff.png
+
+newmtl Motowarning1Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.396078 0.396078 0.396078 
+
+d 1
+
+Ns 0
+
+map_Ka Motowarning1_diff.png
+map_Kd Motowarning1_diff.png
+map_d Motowarning1_diff.png
+
+rbx_doublesided 1
+
+newmtl 2Mtl
+Material Color
+Ka 0.00258583 0.00258583 0.00258583
+Kd 0.00258583 0.00258583 0.00258583
+Ks 0.00102419 0.00102419 0.00102419 
+
+d 0.2
+
+Ns 0
+
+map_Ka Speedm1_diff.png
+map_Kd Speedm1_diff.png
+map_d Speedm1_diff.png
+
+map_Bump Speedm1_nmap.png
+
+rbx_doublesided 1
+
+newmtl 3Mtl
+Material Color
+Ka 0.00604059 0.00604059 0.00604059
+Kd 0.00604059 0.00604059 0.00604059
+Ks 0.00239255 0.00239255 0.00239255 
+
+d 1
+
+Ns 0
+
+map_Ka 3_diff.png
+map_Kd 3_diff.png
+map_d 3_diff.png
+
+rbx_doublesided 1
+
+newmtl Troll1Mtl
+Material Color
+Ka 0.560499 0.0169881 0.00775103
+Kd 0.560499 0.0169881 0.00775103
+Ks 0.373666 0.0113254 0.00516735 
+
+d 1
+
+Ns 255
+
+map_Ka Troll1_diff.png
+map_Kd Troll1_diff.png
+map_d Troll1_diff.png
+
+map_Bump Troll1_nmap.png
+
+map_Ns Troll1_spec.png
+
+rbx_doublesided 1
+
+newmtl Plane0041Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.396078 0.396078 0.396078 
+
+d 1
+
+Ns 0
+
+map_Ka Plane0041_diff.png
+map_Kd Plane0041_diff.png
+map_d Plane0041_diff.png
+
+newmtl Hakumi0011Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.396078 0.396078 0.396078 
+
+d 0.980392
+
+Ns 0
+
+map_Ka Hakumi0011_diff.png
+map_Kd Hakumi0011_diff.png
+map_d Hakumi0011_diff.png
+
+rbx_doublesided 1
+
+newmtl Sm6Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.396078 0.396078 0.396078 
+
+d 1
+
+Ns 0
+
+map_Ka Sm6_diff.png
+map_Kd Sm6_diff.png
+map_d Sm6_diff.png
+
+newmtl Rwm1Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0666667 0.0666667 0.0666667 
+
+d 1
+
+Ns 47
+
+map_Ka Rwm1_diff.png
+map_Kd Rwm1_diff.png
+map_d Rwm1_diff.png
+
+newmtl Rw2Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.396078 0.396078 0.396078 
+
+d 1
+
+Ns 0
+
+map_Ka Rw2_diff.png
+map_Kd Rw2_diff.png
+map_d Rw2_diff.png
+
