@@ -1508,8 +1508,12 @@ func _load_item_textures():
 	for id in paths:
 		if paths[id] != "":
 			if ResourceLoader.exists(paths[id]):
-				item_textures[id] = load(paths[id])
-				print("✓ Załadowano teksturę: %s -> %s" % [id, paths[id]])
+				var tex = load(paths[id])
+				if tex:
+					item_textures[id] = tex
+					print("✓ Załadowano teksturę: %s -> %s" % [id, paths[id]])
+				else:
+					print("✗ Nie można załadować tekstury: ", paths[id])
 			else:
 				print("✗ Brak tekstury: ", paths[id])
 
@@ -2124,7 +2128,8 @@ func _use_hotbar_item(item_id: String):
 	_update_hotbar_selection()
 	_refresh_inventory_grid()
 
-var is_drinking = false
+var is_drinking: bool = false
+
 func _play_drinking_anim(item_id: String):
 	if not current_held_item_node: return
 	is_drinking = true
@@ -2154,19 +2159,13 @@ func _play_drinking_anim(item_id: String):
 	var tw = create_tween()
 	tw.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	var original_rot = current_held_item_node.rotation_degrees
-	# Bardziej płynne i widoczne pochylenie (możesz zmienić sign jeśli rotacja się odwróci złą stroną)
 	var tilt_rot = original_rot + Vector3(60, -20, 0)
 	var original_pos = current_held_item_node.position
-	var tilt_pos = original_pos + Vector3(0.0, -0.15, 0.15) # Podniesienie i przybliżenie do twarzy
+	var tilt_pos = original_pos + Vector3(0.0, -0.15, 0.15)
 	
-	# Animacja do ust
 	tw.tween_property(current_held_item_node, "rotation_degrees", tilt_rot, 0.6)
 	tw.parallel().tween_property(current_held_item_node, "position", tilt_pos, 0.6)
-	
-	# Czekamy ułamek sekundy "pijąc"
 	tw.tween_interval(0.8)
-	
-	# Wrzucamy puszke na stare miejsce
 	tw.tween_property(current_held_item_node, "rotation_degrees", original_rot, 0.6)
 	tw.parallel().tween_property(current_held_item_node, "position", original_pos, 0.6)
 	
@@ -2181,7 +2180,6 @@ func _play_drinking_anim(item_id: String):
 		var bspeed = base_speed
 		SPEED = bspeed * 1.5
 	
-	# Dopiero teraz aktualizujemy hotbar (po zakończeniu animacji)
 	var count = SaveManager.inventory.get(item_id, 0)
 	if count <= 0:
 		hotbar_item_ids[selected_hotbar_slot] = ""

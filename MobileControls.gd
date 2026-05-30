@@ -36,7 +36,7 @@ var wheelie_button: Button
 
 
 func _ready() -> void:
-	layer = 90
+	layer = 10
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	visible = OS.has_feature("mobile") or OS.has_feature("ios") or OS.has_feature("android")
 	_build_ui()
@@ -207,18 +207,20 @@ func _try_use_selected_item() -> bool:
 
 
 func _mobile_action_pressed() -> void:
-	var item_id: String = ""
 	var player: Node = _get_player()
-	if player != null and player.has_method("get_selected_hotbar_item"):
-		item_id = player.get_selected_hotbar_item()
+	
+	var item_id: String = ""
+	if player != null:
+		item_id = player.get_selected_hotbar_item() if player.has_method("get_selected_hotbar_item") else ""
 	
 	if item_id == "pistolet":
-		if player.has_method("_shoot_pistol"):
-			player._shoot_pistol()
+		if player != null:
+			player.call("_shoot_pistol")
 		return
 	
-	if _try_use_selected_item():
-		return
+	if player != null and player.has_method("_try_use_selected_item"):
+		if player._try_use_selected_item():
+			return
 	
 	var vehicle: Node = get_tree().get_first_node_in_group("vehicle")
 	if vehicle != null and vehicle.has_method("interact"):
@@ -266,7 +268,7 @@ func _build_ui() -> void:
 	joystick_knob = _make_circle_panel(Color(0.85, 0.9, 0.82, 0.55), 96)
 	joystick_base.add_child(joystick_knob)
 
-	action_button = _make_button("AKCJA", Vector2(156, 156), Control.PRESET_BOTTOM_RIGHT, Vector2(-182, -180))
+	action_button = _make_button("AKCJA", Vector2(180, 180), Control.PRESET_BOTTOM_RIGHT, Vector2(-210, -210))
 	action_button.button_down.connect(func():
 		_mobile_action_pressed()
 	)
@@ -274,37 +276,37 @@ func _build_ui() -> void:
 		_mobile_action_released()
 	)
 
-	start_button = _make_button("START", Vector2(112, 112), Control.PRESET_BOTTOM_RIGHT, Vector2(-332, -120))
+	start_button = _make_button("START", Vector2(125, 125), Control.PRESET_BOTTOM_RIGHT, Vector2(-365, -210))
 	start_button.button_down.connect(func(): _press_action("bell"))
 	start_button.button_up.connect(func(): _release_action("bell"))
 
-	use_button = _make_button("UŻYJ", Vector2(112, 112), Control.PRESET_BOTTOM_RIGHT, Vector2(-120, -342))
+	use_button = _make_button("UŻYJ", Vector2(125, 125), Control.PRESET_BOTTOM_RIGHT, Vector2(-230, -375))
 	use_button.button_down.connect(func(): _tap_mouse(MOUSE_BUTTON_RIGHT))
 
-	pause_button = _make_button("II", Vector2(72, 72), Control.PRESET_TOP_RIGHT, Vector2(-92, 24))
+	pause_button = _make_button("II", Vector2(85, 85), Control.PRESET_TOP_RIGHT, Vector2(-105, 28))
 	pause_button.pressed.connect(func():
 		_tap_action("pause")
 	)
 
-	jump_button = _make_button("SKOK", Vector2(104, 104), Control.PRESET_BOTTOM_LEFT, Vector2(36, -142))
+	jump_button = _make_button("SKOK", Vector2(120, 120), Control.PRESET_BOTTOM_LEFT, Vector2(42, -260))
 	jump_button.pressed.connect(func():
 		_tap_action("ui_accept")
 		_tap_key(KEY_SPACE)
 	)
 
-	refuel_button = _make_button("TANK", Vector2(96, 96), Control.PRESET_BOTTOM_RIGHT, Vector2(-446, -116))
+	refuel_button = _make_button("TANK", Vector2(110, 110), Control.PRESET_BOTTOM_RIGHT, Vector2(-350, -210))
 	refuel_button.pressed.connect(func():
 		_tap_action("refuel")
 		_tap_key(KEY_G)
 	)
 
-	tablet_button = _make_button("TAB", Vector2(82, 72), Control.PRESET_TOP_LEFT, Vector2(24, 24))
+	tablet_button = _make_button("TAB", Vector2(95, 90), Control.PRESET_TOP_LEFT, Vector2(28, 28))
 	tablet_button.pressed.connect(func(): _tap_key(KEY_TAB))
 
-	inventory_button = _make_button("INV", Vector2(82, 72), Control.PRESET_TOP_LEFT, Vector2(116, 24))
+	inventory_button = _make_button("INV", Vector2(95, 90), Control.PRESET_TOP_LEFT, Vector2(130, 28))
 	inventory_button.pressed.connect(func(): _tap_key(KEY_I))
 
-	push_button = _make_button("PCHAJ", Vector2(96, 82), Control.PRESET_BOTTOM_RIGHT, Vector2(-448, -214))
+	push_button = _make_button("PCHAJ", Vector2(110, 95), Control.PRESET_BOTTOM_RIGHT, Vector2(-260, -245))
 	push_button.button_down.connect(func():
 		_press_action("refuel")
 		_set_key(KEY_H, true)
@@ -314,18 +316,17 @@ func _build_ui() -> void:
 		_set_key(KEY_H, false)
 	)
 
-	reload_button = _make_button("R", Vector2(72, 72), Control.PRESET_TOP_RIGHT, Vector2(-176, 24))
+	reload_button = _make_button("R", Vector2(85, 85), Control.PRESET_TOP_RIGHT, Vector2(-100, 28))
 	reload_button.pressed.connect(func(): _tap_key(KEY_R))
 
-	hotbar_prev_button = _make_button("<", Vector2(72, 72), Control.PRESET_BOTTOM_LEFT, Vector2(36, -236))
+	hotbar_prev_button = _make_button("<", Vector2(85, 85), Control.PRESET_BOTTOM_LEFT, Vector2(42, -265))
 	hotbar_prev_button.pressed.connect(func(): _tap_action("scroll_up"))
 
-	hotbar_next_button = _make_button(">", Vector2(72, 72), Control.PRESET_BOTTOM_LEFT, Vector2(124, -236))
+	hotbar_next_button = _make_button(">", Vector2(85, 85), Control.PRESET_BOTTOM_LEFT, Vector2(135, -265))
 	hotbar_next_button.pressed.connect(func(): _tap_action("scroll_down"))
 
-	wheelie_button = _make_button("WHEEL", Vector2(108, 82), Control.PRESET_BOTTOM_RIGHT, Vector2(-570, -116))
-	wheelie_button.button_down.connect(func(): _set_key(KEY_ALT, true))
-	wheelie_button.button_up.connect(func(): _set_key(KEY_ALT, false))
+	joystick_radius = 150.0
+	joystick_activation_size = Vector2(500, 500)
 
 
 func _make_button(text: String, size: Vector2, preset: int, position: Vector2) -> Button:

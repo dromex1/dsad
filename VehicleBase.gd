@@ -114,7 +114,6 @@ func _ready():
 	
 	interact_zone.body_entered.connect(_on_body_entered)
 	interact_zone.body_exited.connect(_on_body_exited)
-	SaveManager.scooter_stats_updated.connect(load_stats_from_save_manager)
 	
 	# Dynamicznie znajdź model (może być "model_roweru", "sr50", itp.)
 	model_roweru = null
@@ -292,13 +291,11 @@ func mobile_look(relative: Vector2):
 
 func _process(_delta):
 	if not is_mounted:
+		if Input.is_action_just_pressed("interact") and player_in_area and player_node != null:
+			mount_bike()
+	else:
 		if Input.is_action_just_pressed("interact"):
-			if player_in_area and player_node != null and not is_mounted:
-				mount_bike()
-		return
-
-	if Input.is_action_just_pressed("interact"):
-		dismount_bike()
+			dismount_bike()
 			
 	if Input.is_key_pressed(KEY_M):
 		if is_mounted and bell_timer.is_stopped():
