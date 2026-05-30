@@ -153,8 +153,9 @@ func _release_action(action_name: String) -> void:
 
 
 func _tap_action(action_name: String) -> void:
-	_press_action(action_name)
-	_release_action(action_name)
+	Input.action_press(action_name)
+	await get_tree().process_frame
+	Input.action_release(action_name)
 
 
 func _set_key(keycode: int, pressed: bool) -> void:
@@ -206,11 +207,26 @@ func _try_use_selected_item() -> bool:
 
 
 func _mobile_action_pressed() -> void:
+	var item_id: String = ""
+	var player: Node = _get_player()
+	if player != null and player.has_method("get_selected_hotbar_item"):
+		item_id = player.get_selected_hotbar_item()
+	
+	if item_id == "pistolet":
+		if player.has_method("_shoot_pistol"):
+			player._shoot_pistol()
+		return
+	
 	if _try_use_selected_item():
 		return
-	_press_action("interact")
+	
+	var vehicle: Node = get_tree().get_first_node_in_group("vehicle")
+	if vehicle != null and vehicle.has_method("interact"):
+		vehicle.interact()
+		return
+	
+	Input.action_press("interact")
 	_set_key(KEY_E, true)
-	_tap_mouse(MOUSE_BUTTON_LEFT)
 
 
 func _mobile_action_released() -> void:

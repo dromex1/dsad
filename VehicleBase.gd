@@ -803,8 +803,10 @@ func repair_vehicle():
 var is_exploded = false
 
 func interact():
-	# Podstawowa interakcja (może np. pisać cos nad skuterem)
-	pass
+	if is_mounted:
+		dismount_bike()
+	elif player_in_area and player_node != null and not is_mounted:
+		mount_bike()
 
 var explosion_audio: AudioStreamPlayer3D = null
 var explosion_particles: GPUParticles3D = null

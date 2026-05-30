@@ -93,7 +93,7 @@ var inventory = {
 	"pasek": 0,
 	"swieca": 0,
 	"przewod_paliwowy": 0,
-	"pistolet": 0
+	"pistolet": 5
 }
 var canister_fuel: float = 5.0  # Ile paliwa w kanistrze (max 5.0) - pełny na start
 const CANISTER_MAX = 5.0

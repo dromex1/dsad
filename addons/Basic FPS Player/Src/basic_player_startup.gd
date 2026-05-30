@@ -89,7 +89,7 @@ var hotbar_icons: Array = []  # Array of TextureRect
 var hotbar_labels: Array = []  # Array of Label
 var inventory_panel: PanelContainer = null
 var inventory_grid: GridContainer = null
-var hotbar_item_ids = ["kanister", "piwo", "energol", "", ""]
+var hotbar_item_ids = ["kanister", "piwo", "energol", "pistolet", ""]
 var item_textures = {}
 
 # --- Pistolet Amunicja HUD ---
@@ -280,10 +280,18 @@ func _ready():
 	SaveManager.inventory["energol"] = 3
 	SaveManager.inventory["papieros"] = 3
 	SaveManager.inventory["kanister"] = 1
+	SaveManager.inventory["pistolet"] = 5
+	SaveManager.pistol_ammo = SaveManager.PISTOL_AMMO_MAX
 	SaveManager.canister_fuel = 5.0
 	
 	SaveManager.xp_updated.connect(_on_xp_updated)
 	SaveManager.money_updated.connect(_on_money_updated)
+
+
+func _get_selected_hotbar_item() -> String:
+	if selected_hotbar_slot >= 0 and selected_hotbar_slot < hotbar_item_ids.size():
+		return hotbar_item_ids[selected_hotbar_slot]
+	return ""
 
 
 func _physics_process(delta):
@@ -2183,7 +2191,7 @@ func _play_drinking_anim(item_id: String):
 		
 	is_drinking = false
 
-var is_smoking_inhaling = false
+var is_smoking_inhaling: bool = false
 
 func _exhale_smoke():
 	print("Wydmuchuje dym!")

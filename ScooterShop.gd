@@ -40,6 +40,7 @@ func _ready():
 	prompt.text = "Sklep\nNaciśnij [E]"
 	prompt.font_size = 24
 	prompt.position.y = 1.5
+	prompt.visible = false
 	add_child(prompt)
 	
 	# GUI sklepu
@@ -361,10 +362,16 @@ func _on_buy_part(part_id: String, price: float):
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		player_in_shop = true
+		var prompt = get_node_or_null("ShopPrompt")
+		if prompt:
+			prompt.visible = true
 
 func _on_body_exited(body):
 	if body.is_in_group("player"):
 		player_in_shop = false
+		var prompt = get_node_or_null("ShopPrompt")
+		if prompt:
+			prompt.visible = false
 		_on_close_shop()
 
 func _input(event):
