@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://mobilek4oo22rgo6es"]
+[gd_scene format=3 uid="uid://bwoqjj8j6u0kr"]
 
 [ext_resource type="Texture2D" uid="uid://blyg72rocdarx" path="res://textury/trawa2/Grass002_1K-JPG_Color.jpg" id="1_o3xg3"]
 [ext_resource type="Script" uid="uid://10ieormhysus" path="res://addons/Basic FPS Player/Src/basic_player_startup.gd" id="1_xpt0u"]

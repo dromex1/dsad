@@ -368,6 +368,9 @@ func _on_body_exited(body):
 		_on_close_shop()
 
 func _input(event):
+	if player_in_shop and Input.is_action_just_pressed("interact") and not shop_gui.visible:
+		_on_open_shop()
+		return
 	if player_in_shop and event is InputEventKey:
 		if event.pressed:
 			if event.keycode == KEY_E and not shop_gui.visible:

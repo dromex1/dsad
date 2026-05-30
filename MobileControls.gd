@@ -11,8 +11,9 @@ var joystick_touch_id: int = -1
 var look_touch_id: int = -1
 var joystick_center: Vector2 = Vector2.ZERO
 var joystick_vector: Vector2 = Vector2.ZERO
-var joystick_radius: float = 96.0
-var joystick_activation_size: Vector2 = Vector2(320, 320)
+var joystick_radius: float = 130.0
+var joystick_activation_size: Vector2 = Vector2(460, 460)
+var joystick_fixed_offset: Vector2 = Vector2(220, 250)
 var look_sensitivity: float = 1.0
 var pressed_actions: Dictionary = {}
 
@@ -31,6 +32,7 @@ var push_button: Button
 var reload_button: Button
 var hotbar_prev_button: Button
 var hotbar_next_button: Button
+var wheelie_button: Button
 
 
 func _ready() -> void:
@@ -58,13 +60,15 @@ func _input(event: InputEvent) -> void:
 func _handle_touch(event: InputEventScreenTouch) -> void:
 	var viewport_size: Vector2 = get_viewport().get_visible_rect().size
 	if event.pressed:
+		if _is_over_menu_or_ui(event.position):
+			return
 		if _is_in_joystick_zone(event.position, viewport_size) and joystick_touch_id == -1:
 			joystick_touch_id = event.index
-			joystick_center = event.position
+			joystick_center = _get_joystick_center(viewport_size)
 			joystick_base.global_position = joystick_center - joystick_base.size * 0.5
 			joystick_knob.position = joystick_base.size * 0.5 - joystick_knob.size * 0.5
 			joystick_base.visible = true
-		elif not _is_over_menu_or_ui(event.position) and look_touch_id == -1:
+		elif look_touch_id == -1:
 			look_touch_id = event.index
 	else:
 		if event.index == joystick_touch_id:
@@ -91,6 +95,10 @@ func _handle_drag(event: InputEventScreenDrag) -> void:
 func _is_in_joystick_zone(position: Vector2, viewport_size: Vector2) -> bool:
 	var zone: Rect2 = Rect2(Vector2(0, viewport_size.y - joystick_activation_size.y), joystick_activation_size)
 	return zone.has_point(position)
+
+
+func _get_joystick_center(viewport_size: Vector2) -> Vector2:
+	return Vector2(joystick_fixed_offset.x, viewport_size.y - joystick_fixed_offset.y)
 
 
 func _is_over_menu_or_ui(position: Vector2) -> bool:
@@ -173,6 +181,43 @@ func _tap_mouse(button_index: int) -> void:
 	Input.parse_input_event(input_event)
 
 
+func _get_player() -> Node:
+	var player: Node = get_tree().get_first_node_in_group("player")
+	if player != null:
+		return player
+	return get_tree().root.find_child("Basic FPS Player", true, false)
+
+
+func _try_use_selected_item() -> bool:
+	var player: Node = _get_player()
+	if player == null or not player.has_method("_use_hotbar_item"):
+		return false
+	var hotbar_items = player.get("hotbar_item_ids")
+	var selected_slot = player.get("selected_hotbar_slot")
+	if not (hotbar_items is Array) or not (selected_slot is int):
+		return false
+	if selected_slot < 0 or selected_slot >= hotbar_items.size():
+		return false
+	var item_id: String = str(hotbar_items[selected_slot])
+	if item_id in ["piwo", "energol", "papieros"]:
+		player.call("_use_hotbar_item", item_id)
+		return true
+	return false
+
+
+func _mobile_action_pressed() -> void:
+	if _try_use_selected_item():
+		return
+	_press_action("interact")
+	_set_key(KEY_E, true)
+	_tap_mouse(MOUSE_BUTTON_LEFT)
+
+
+func _mobile_action_released() -> void:
+	_release_action("interact")
+	_set_key(KEY_E, false)
+
+
 func _apply_look(relative: Vector2) -> void:
 	var mounted_vehicle: Node = _get_mounted_vehicle()
 	if mounted_vehicle != null and mounted_vehicle.has_method("mobile_look"):
@@ -196,20 +241,21 @@ func _build_ui() -> void:
 	root_control.set_anchors_preset(Control.PRESET_FULL_RECT)
 	add_child(root_control)
 
-	joystick_base = _make_circle_panel(Color(0.05, 0.06, 0.05, 0.34), 192)
+	root_control.mouse_filter = Control.MOUSE_FILTER_IGNORE
+
+	joystick_base = _make_circle_panel(Color(0.05, 0.06, 0.05, 0.34), 260)
 	joystick_base.visible = false
 	root_control.add_child(joystick_base)
 
-	joystick_knob = _make_circle_panel(Color(0.85, 0.9, 0.82, 0.55), 72)
+	joystick_knob = _make_circle_panel(Color(0.85, 0.9, 0.82, 0.55), 96)
 	joystick_base.add_child(joystick_knob)
 
 	action_button = _make_button("AKCJA", Vector2(156, 156), Control.PRESET_BOTTOM_RIGHT, Vector2(-182, -180))
 	action_button.button_down.connect(func():
-		_press_action("interact")
-		_tap_mouse(MOUSE_BUTTON_LEFT)
+		_mobile_action_pressed()
 	)
 	action_button.button_up.connect(func():
-		_release_action("interact")
+		_mobile_action_released()
 	)
 
 	start_button = _make_button("START", Vector2(112, 112), Control.PRESET_BOTTOM_RIGHT, Vector2(-332, -120))
@@ -261,6 +307,10 @@ func _build_ui() -> void:
 	hotbar_next_button = _make_button(">", Vector2(72, 72), Control.PRESET_BOTTOM_LEFT, Vector2(124, -236))
 	hotbar_next_button.pressed.connect(func(): _tap_action("scroll_down"))
 
+	wheelie_button = _make_button("WHEEL", Vector2(108, 82), Control.PRESET_BOTTOM_RIGHT, Vector2(-570, -116))
+	wheelie_button.button_down.connect(func(): _set_key(KEY_ALT, true))
+	wheelie_button.button_up.connect(func(): _set_key(KEY_ALT, false))
+
 
 func _make_button(text: String, size: Vector2, preset: int, position: Vector2) -> Button:
 	var button: Button = Button.new()
@@ -288,6 +338,7 @@ func _make_button(text: String, size: Vector2, preset: int, position: Vector2) -
 func _make_circle_panel(color: Color, size_px: float) -> Panel:
 	var panel: Panel = Panel.new()
 	panel.size = Vector2(size_px, size_px)
+	panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	var style: StyleBoxFlat = StyleBoxFlat.new()
 	style.bg_color = color
 	style.set_corner_radius_all(int(size_px * 0.5))
@@ -303,7 +354,7 @@ func _is_pointer_over_button(event: InputEvent) -> bool:
 		position = event.position
 	if position == Vector2.INF:
 		return false
-	for button in [action_button, start_button, use_button, pause_button, jump_button, refuel_button, tablet_button, inventory_button, push_button, reload_button, hotbar_prev_button, hotbar_next_button]:
+	for button in [action_button, start_button, use_button, pause_button, jump_button, refuel_button, tablet_button, inventory_button, push_button, reload_button, hotbar_prev_button, hotbar_next_button, wheelie_button]:
 		var control_button: Button = button as Button
 		if control_button != null and control_button.get_global_rect().has_point(position):
 			return true
@@ -319,3 +370,5 @@ func _release_all() -> void:
 	_release_action("refuel")
 	_release_action("ui_accept")
 	_set_key(KEY_H, false)
+	_set_key(KEY_E, false)
+	_set_key(KEY_ALT, false)
